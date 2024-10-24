@@ -17,18 +17,15 @@
 \usetikzlibrary{arrows, shapes.geometric, fit}
 \newcounter{correction} % Compteur pour les questions
 
-% Définir une nouvelle couleur
-\definecolor{mygreen}{RGB}{34,139,34}
-
 % Définir la commande pour afficher une question numérotée
 \newcommand{\question}{%
   \refstepcounter{correction}%
-  \textbf{\textcolor{mygreen}{Exercice \thecorrection (1 point) :}} \ignorespaces
+  \textbf{\textcolor{black}{Question \thecorrection (1 point) :}} \ignorespaces
 }
 % Commande pour ajouter du texte en arrière-plan
 \AddToShipoutPicture{
     \AtTextCenter{%
-        \makebox[0pt]{\rotatebox{60}{\textcolor[gray]{0.9}{\fontsize{10cm}{10cm}\selectfont MATHS BAC}}}
+        \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.9}{\fontsize{10cm}{10cm}\selectfont Pathé Gobel BA}}}
     }
 }
 \begin{document}
@@ -36,13 +33,13 @@
 % En-tête
 \begin{center}
     \begin{tabular}{@{} p{5cm} p{5cm} p{5cm} @{}} % 3 colonnes avec largeurs fixées
-        Lycée Sérère & Test 2 & 25 Octobre 2024 \\
+        Lycée Dindéfélo & Test 2 & 25 Octobre 2024 \\
     \end{tabular}
     \\[-0.01cm] % Ajuster l'espace vertical entre le tableau et la barre
     \hrule % Barre horizontale
 \end{center}
 \begin{center}
-    \textbf{\Large Test 1 : Asymptotes et fonctions rationnelles} \\[0.2cm]
+    \textbf{\Large Test 2 : Asymptotes et Branches Infinies} \\[0.2cm]
     \textbf{\large Professeur : M. BA} \\[0.2cm]
     \textbf{Classe : Terminale S2} \\[0.2cm]
     \textbf{\small Durée : 10 minutes} \\[0.2cm]
@@ -55,14 +52,14 @@
 % Introduction aux questions
 Complétez les exercices suivants en utilisant le cours et vos connaissances sur les asymptotes. \\[0.3cm]
 
-\question\\
+\question
 On dit que la droite d'équation \( y = d \) est une asymptote horizontale à la courbe représentative de \( h \) si :
 
 \[
 \lim_{x \to +\infty} h(x) = \underline{\hspace{2cm}}, \quad \lim_{x \to -\infty} h(x) = \underline{\hspace{2cm}}
 \]
 
-\question\\
+\question\
 Complétez la phrase suivante : La droite d'équation \( x = c \) est une asymptote verticale à la courbe représentative de \( h \) si \underline{\hspace{15cm}}\\[0.3cm]
 \underline{\hspace{20cm}}
 
