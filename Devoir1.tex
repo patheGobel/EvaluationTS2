@@ -1,0 +1,100 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx}
+\usepackage[a4paper, top=0cm, bottom=2cm, left=2cm, right=2cm]{geometry} % Ajuste les marges
+\usepackage{xcolor} % Pour ajouter des couleurs
+\usepackage{hyperref} % Pour avoir des références colorées si nécessaire
+\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, fit}
+\newcounter{correction} % Compteur pour les questions
+
+% Définir la commande pour afficher une question numérotée
+\newcommand{\question}{%
+  \refstepcounter{correction}%
+  \textbf{\textcolor{black}{Question \thecorrection : 2 pts}} \ignorespaces
+}
+% Commande pour ajouter du texte en arrière-plan
+\AddToShipoutPicture{
+    \AtTextCenter{%
+        \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.9}{\fontsize{10cm}{10cm}\selectfont Pathé Gobel BA}}}
+    }
+}
+\begin{document}
+\hrule % Barre horizontale
+% En-tête
+\begin{center}
+    \begin{tabular}{@{} p{5cm} p{5cm} p{5cm} @{}} % 3 colonnes avec largeurs fixées
+        Lycée Dindéfélo & \quad\quad\quad Test 4 & 4 Décembre 2024 \\
+    \end{tabular}
+    \\[-0.01cm] % Ajuster l'espace vertical entre le tableau et la barre
+    \hrule % Barre horizontale
+\end{center}
+\begin{center}
+    \textbf{\Large Equations Paramétriques} \\[0.2cm]
+    \textbf{\large Professeur : M. BA} \\[0.2cm]
+    \textbf{Classe : $1^{er}$ S2} \\[0.2cm]
+    \textbf{\small Durée : 10 minutes} \\[0.2cm]
+    \textbf{\small Note :\quad\quad /5}
+\end{center}
+
+\textbf{Problème : 12,75 points}
+
+\textbf{Partie A :}
+
+Soit \( f \) la fonction définie par :
+\[
+f(x) = x - 2 - \sqrt{x^2 - 2x}.
+\]
+
+
+\textbf{1. Déterminer \( D_f \).} \hspace{1cm} (0,5 pt)
+
+\begin{enumerate}
+    \item[a)] Calculer \( \lim_{x \to +\infty} f(x) \) et \( \lim_{x \to -\infty} f(x) \). \hspace{1cm} (0,25 pt), (0,5 pt)
+    \item[b)] Étudier la branche infinie de la courbe \( (C_f) \) au voisinage de \( -\infty \). \hspace{1cm} (1 pt)
+    \item[c)] Étudier la branche infinie de la courbe \( (C_f) \) au voisinage de \( +\infty \). \hspace{1cm} (1 pt)
+\end{enumerate}
+
+2. Étudier la dérivabilité de la fonction \( f \) à droite de 2 et à gauche de 0, puis interpréter géométriquement les résultats obtenus. \hspace{1cm} (2 pts)
+
+\begin{enumerate}
+    \item[a)] Justifier la dérivabilité de la fonction sur \( ]-\infty, 0] \cup ]2, +\infty[ \), puis montrer que pour tout \( x \in ]-\infty, 0[ \cup ]2, +\infty[ \) :
+    \[
+    f'(x) = \frac{\sqrt{x^2 - 2x} - (x - 1)}{\sqrt{x^2 - 2x}}.
+    \]
+    \hspace{1cm} (1,5 pt)
+    
+    \item[b)] Montrer que : \( \forall x \in ]-\infty, 0], f'(x) > 0 \) et \( \forall x \in ]2, +\infty[, f'(x) < 0 \). \hspace{1cm} (1 pt)
+    
+    \item[c)] Dresser le tableau de variations de la fonction \( f \). \hspace{1cm} (1,25 pt)
+\end{enumerate}
+
+3. Tracer la courbe \( (C_f) \) dans un repère orthonormé \( (O, \vec{i}, \vec{j}) \). \hspace{1cm} (1,25 pt)
+
+\textbf{Partie B :}
+
+On considère la fonction \( g \) la restriction de la fonction \( f \) sur \( [2, +\infty[ \) :
+\[
+g(x) = f(x), \quad x \geq 2.
+\]
+
+\begin{enumerate}
+    \item[a)] Montrer que \( g \) admet une fonction réciproque \( g^{-1} \) définie sur un intervalle \( J \) qu'on déterminera. \hspace{1cm} (0,5 pt)
+    
+    \item[b)] Calculer \( g^{-1}(2 - 2\sqrt{2}) \). (On donne : \( g(4) = 2 - 2\sqrt{2} \)). \hspace{1cm} \textbf{(0,75 pt)}
+    
+    \item[c)] Déterminer \( g^{-1}(x) \) pour tout \( x \in J \). \hspace{3cm} \textbf{(0,5 pt)}
+    
+    \item[d)] Tracer la courbe \( (C_{g^{-1}}) \) dans le même repère orthonormé \( (O, \vec{i}, \vec{j}) \). \hspace{2cm} \textbf{(0,75 pt)}
+\end{enumerate}
+
+\end{document}
