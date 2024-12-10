@@ -347,7 +347,7 @@ Donc \( \forall x \in ]-\infty, 0], f'(x) > 0 \) et \( \forall x \in ]2, +\infty
    \tkzTabLine
      { , + , d , h , d, -, }
    \tkzTabVar
-   	{ -/$-\infty$ , +CH/-2, +C/0, -/-1}
+   	{ -/$-\infty$ , +H/-2, +C/0, -/-1}
     %{ -/1 , +DH/$+\infty$, -C/0, +/1}
 \end{tikzpicture}
 \end{center}
@@ -371,11 +371,25 @@ On considère la fonction \( g \) la restriction de la fonction \( f \) sur \( [
 \begin{enumerate}
 \item Montrons que \( g \) admet une fonction réciproque \( g^{-1} \) définie sur un intervalle \( J \)\\ que l’on déterminera . \hspace{1cm} \textbf{(0,5 pt)}
     
-\( g \) est continue et strictement croissant décroissante sur \( [2, +\infty[ \) vers \( [-1, 0] \)
-   %\item Calculer \( g^{-1}(2 - 2\sqrt{2}) \). (On donne : \( g(4) = (2 - 2\sqrt{2} \)). \hspace{1cm} \textbf{(0,75 pt)}
+\( g \) est continue et strictement décroissante sur \( [2, +\infty[ \) vers \( [-1, 0] \) donc \( g \) est bijectif.
+
+Donc admet aussi une bijection réciproque de \( [-1, 0] \) vers \( [2, +\infty[ \)
+   \item Calculons \( g^{-1}(2 - 2\sqrt{2}) \). (On donne : \( g(4) = (2 - 2\sqrt{2} \)). \hspace{1cm} \textbf{(0,75 pt)}\\
+    \( g(4) = (2 - 2\sqrt{2}) \implies g^{-1}(2 - 2\sqrt{2}) = 4\)
+    \item Déterminons \( g^{-1}(x) \) pour tout \( x \in J \). \hspace{3cm} \textbf{(0,5 pt)}
     
-    %\item Déterminer \( g^{-1}(x) \) pour tout \( x \in J \). \hspace{3cm} \textbf{(0,5 pt)}
+    Pour déterminer \( g^{-1}(x) \), résolvons \( g(x) = y \)
     
+    \begin{align*}
+    g(x) = y \implies  x - 2 - \sqrt{x^2 - 2x} = y &\implies \sqrt{x^2 - 2x} = x - 2 - y\\
+    																								&\implies x^2 - 2x = (x - 2 - y)^{2}\\
+    																								&\implies x^2 - 2x = (x-2)^{2}-2(x-2)y+y^{2}\\
+    																								&\implies x^2 - 2x = x^{2}-4x+4-2xy+4y+y^{2}\\
+    																								&\implies 2x+2xy = 4+4y+y^{2}\\
+    																								&\implies x(2+2y) = 4+4y+y^{2}\\
+    																								&\implies x = \frac{4+4y+y^{2}}{2(1+y)}\\
+		\end{align*}     
+		Donc \(\boxed{ g^{-1}(x) = \frac{4+4x+x^{2}}{2(1+x)}}\)
     %\item Tracer la courbe \( (C_{g^{-1}}) \) dans le même repère orthonormé \( (O, \vec{i}, \vec{j}) \). \hspace{2cm} \textbf{(0,5 pt)}
 \end{enumerate}
 \end{enumerate}
