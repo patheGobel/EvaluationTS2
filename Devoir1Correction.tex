@@ -190,7 +190,7 @@ Donc $D_f=]-\infty ; 0] \cup [2 ; +\infty[ $
 \lim_{x \to -\infty} f(x) &= \lim_{x \to -\infty}x - 2 - \sqrt{x^2 - 2x}=-\infty
 \end{align*}
 \[
-\textcolor{green}{\boxed{ \lim_{x \to -\infty} f(x) = +\infty  }} \textbf{ 0,25 points}
+\textcolor{green}{\boxed{ \lim_{x \to -\infty} f(x) = -\infty  }} \textbf{ 0,25 points}
 \]
 \underline{en $+\infty$:}
 \begin{align*}
@@ -219,16 +219,143 @@ Comme $\lim_{x \to -\infty} f(x) = +\infty$ Cherchons $\lim_{x \to -\infty} \fra
 \textcolor{green}{Donc $y=0$  est A.H à $(\mathcal{C}_{f}) $ au voisinage de $-\infty$}
 \end{enumerate}
 \item Étudions la dérivabilité de la fonction \( f \) à droite de 2 et à gauche de 0, puis interprétons géométriquement les résultats obtenus. \hspace{1cm} \textbf{(2 pt)}\\
-\underline{En $2^{-}:$}
+\underline{En $2^{+}:$}
 \begin{align*}
-\lim_{x \to 2^{-}} \frac{f(x)-f(2)}{x-2} &= \lim_{x \to 2^{-}}\frac{x - 2 - \sqrt{x^2 - 2x}}{x-2}\\
-												&=\lim_{x \to 2^{-}} \frac{x - 2 }{x - 2 }-\frac{\sqrt{x^2 - 2x}}{x - 2 }\\
-												&=1-\lim_{x \to 2^{-}}\frac{\sqrt{x^2 - 2x}}{x - 2 }\\
-												&=1-\lim_{x \to 2^{-}}\frac{x(x - 2)}{ (x - 2)(\sqrt{x^2 - 2x}) }\\
-												&=1-\lim_{x \to 2^{-}}\frac{x}{(\sqrt{x^2 - 2x}) }
+\lim_{x \to 2^{+}} \frac{f(x)-f(2)}{x-2} &= \lim_{x \to 2^{+}}\frac{x - 2 - \sqrt{x^2 - 2x}}{x-2}\\
+												&=\lim_{x \to 2^{+}} \frac{x - 2 }{x - 2 }-\frac{\sqrt{x^2 - 2x}}{x - 2 }\\
+												&=1-\lim_{x \to 2^{+}}\frac{\sqrt{x^2 - 2x}}{x - 2 }\\
+												&=1-\lim_{x \to 2^{+}}\frac{x(x - 2)}{ (x - 2)(\sqrt{x^2 - 2x}) }\\
+												&=1-\lim_{x \to 2^{+}}\frac{x}{(\sqrt{x^2 - 2x}) }
 \end{align*}
 \[
-\textcolor{green}{\boxed{ \lim_{x \to +\infty} f(x) = 0  }} \textbf{ 0,25 points}
+\textcolor{green}{\boxed{ \lim_{x \to 2^{+}} f(x) =  -\infty }} \textbf{ 0,25 points}
 \]
+\textbf{Interprétation:} $f$ n'est pas dérivable en 0 mais admet au point $A(2;0=f(2))$ une demi-tangente verticale orientée vers le bas.
+
+\underline{En $0^{-}:$}
+\begin{align*}
+\lim_{x \to 0^{-}} \frac{f(x)-f(2)}{x} &= \lim_{x \to 0^{-}}\frac{x - 2 - \sqrt{x^2 - 2x}+2}{x}\\
+												&= \lim_{x \to 0^{-}}\frac{x - \sqrt{x^2 - 2x}}{x}\\
+												&=\lim_{x \to 0^{-}} 1-\frac{\sqrt{x^2 - 2x}}{x}\\
+												&=1-\lim_{x \to 0^{-}}\frac{\sqrt{x^2 - 2x}}{x}\\
+												&=1-\lim_{x \to 0^{-}}\frac{x(x - 2)}{ x(\sqrt{x^2 - 2x}) }\\
+												&=1-\lim_{x \to 0^{-}}\frac{(x - 2)}{\sqrt{x^2 - 2x}}
+\end{align*}
+\[
+\textcolor{green}{\boxed{ \lim_{x \to 0^{-}} f(x) =  +\infty }} \textbf{ 0,25 points}
+\]
+\textbf{Interprétation:} $f$ n'est pas dérivable en 0 mais admet au point $A(0;-2=f(0))$ une demi-tangente verticale orientée vers le bas.
+\begin{enumerate}
+    \item Justifions la dérivabilité de la fonction sur \( ]-\infty, 0[ \cup ]2, +\infty[ \)\\
+    
+$ x \mapsto x - 2 $ est dérivable sur $\mathbb{R}$, comme fonction polynome, en particulier sur \( ]-\infty, 0[ \cup ]2, +\infty[ \)
+
+$ x \mapsto - \sqrt{x^2 - 2x}$ est dérivable sur \( ]-\infty, 0[ \cup ]2, +\infty[ \), comme fonction irrationnelle
+
+Par somme, $ x \mapsto x - 2 - \sqrt{x^2 - 2x}$ est dérivable sur \( ]-\infty, 0] \cup ]2, +\infty[ \).
+
+Montrons que pour tout \( x \in ]-\infty, 0[ \cup ]2, +\infty[ \) :
+    \(
+    f'(x) = \frac{\sqrt{x^2 - 2x} - (x - 1)}{\sqrt{x^2 - 2x}}.
+    \)    \hspace{1cm} \textbf{(1,5 pt)}
+    
+En effet $f(x)=x - 2 - \sqrt{x^2 - 2x}$
+
+$f'(x)=1 - \frac{2x-2}{2\sqrt{x^2 - 2x}}=1 - \frac{x-1}{\sqrt{x^2 - 2x}}=\frac{\sqrt{x^2 - 2x}-(x-1)}{\sqrt{x^2 - 2x}}$
+\item Montrons que : \( \forall x \in ]-\infty, 0], f'(x) > 0 \) et \( \forall x \in ]2, +\infty[, f'(x) < 0 \). \hspace{1cm} \textbf{(1 pt)}
+
+Le signe de $f'$ dépend du numérateur.
+
+Supposons que $\sqrt{x^2 - 2x} - (x - 1) <0 $
+
+$$
+\sqrt{x^2 - 2x} - (x - 1) <0 \implies \sqrt{x^2 - 2x} < (x - 1) \implies 
+\begin{cases}
+x^2 - 2x\geq 0 \\
+x - 1 \geq 0 \\
+x^2 - 2x < (x - 1)^{2}
+\end{cases}
+\implies 
+\begin{cases}
+x^2 - 2x\geq 0 \\
+x - 1 \geq 0 \\
+0 < 1
+\end{cases}
+$$
+
+$$
+\text{Posons }
+\begin{cases}
+x^2 - 2x = 0 \\
+x - 1 = 0
+\end{cases}
+\implies
+\begin{cases}
+x=0 \text{ ou } x=2 \\
+x = 1
+\end{cases} 
+$$
+
+\begin{center}
+\begin{tikzpicture} 
+\tkzTabSetup[doubledistance = 2pt,
+             tstyle         =  dotted,
+             hopacity       =.2,
+             hcolor         = red!50!black]
+\tkzTabInit[lgt=2,espcl=2] 
+{
+$x$ /1, 
+$x^2-2x$ /1, 
+$x-1$/1,
+/0}% 
+{$-\infty$ ,$0$ ,$2$ ,$+\infty$}% 
+\tkzTabLine{ , + , z , h , z , + }
+\tkzTabLine{ , - , z , h , z , +}
+\end{tikzpicture} 
+\end{center}
+\begin{center}
+
+\begin{tikzpicture}
+   \tkzTabInit[lgt = 2.5, espcl = 3, deltacl = 0.7]{$x$ / 1 , $f(x)$ / 1 , $g(x)$ / 1 }{$-\infty$, $6$, $8$, $+\infty$}
+   \tkzTabLine{, -, d, h, d, +, }
+   \tkzTabLine{, -, d, h, d, +, }
+\end{tikzpicture}
+
+\end{center}
+Donc pour que $\sqrt{x^2 - 2x} - (x - 1) <0 $ il faut que $x\in ]2, +\infty[$
+
+Ainsi, si $x\in ]-\infty, 0[$ alors $\sqrt{x^2 - 2x} - (x - 1) > 0 $
+
+Donc \( \forall x \in ]-\infty, 0], f'(x) > 0 \) et \( \forall x \in ]2, +\infty[, f'(x) < 0 \)
+
+\item Dressons le tableau de variations de la fonction \( f \). \hspace{1cm} \textbf{(1,25 pt)}
+
+\begin{center}
+    \begin{tikzpicture}[node style/.style={fill opacity=0,text opacity=1}]
+        \tkzTabInit[espcl=1.75]{$x$/.5,$f'$/.7,$f$/1.5}{$-\infty$,$0$,$2$,$+\infty$}
+        \tkzTabLine{,+,d,h,d,-,}
+        \tkzTabVar{-/$-1$, +/$+\infty$, +D+/$-\infty$, -/$4$} 
+    \end{tikzpicture}
+\end{center}
+\begin{center}
+\begin{tikzpicture}
+   \tkzTabInit[lgt=3,espcl=1.5]
+     {$x$ / 1 , $f'(x)$ / 1, $f(x)$ / 2 }
+     {$-\infty$, $0$, $2$, $+\infty$}
+   \tkzTabLine
+     { , + , d , h , d, -, }
+   \tkzTabVar
+   	{ -/$-\infty$ , +CH/-2, +C/0, -/0}
+    %{ -/1 , +DH/$+\infty$, -C/0, +/1}
+\end{tikzpicture}
+\end{center}
 \end{enumerate}
+\begin{figure}[h]% Forcer l'image à cet endroit
+\centering
+\includegraphics[width=0.8\textwidth]{DevoirCurve.png}
+\caption{Courbe de (Cf)}
+\label{fig:monimage}
+\end{figure}
+\end{enumerate}
+
 \end{document}
