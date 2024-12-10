@@ -196,12 +196,14 @@ Donc $D_f=]-\infty ; 0] \cup [2 ; +\infty[ $
 \begin{align*}
 \lim_{x \to +\infty} f(x) &= \lim_{x \to +\infty}x - 2 - \sqrt{x^2 - 2x}\\
 													&= \lim_{x \to +\infty}\frac{(x - 2)^{2} - (x^2 - 2x)}{x - 2 + \sqrt{x^2 - 2x}}\\
-													&= \lim_{x \to +\infty}\frac{x^{2}-2x+1 - x^2 + 2x}{x - 2 + \sqrt{x^2 - 2x}}\\
-													&= \lim_{x \to +\infty}\frac{1}{x - 2 + \sqrt{x^2 - 2x}}\\
-													&= 0
+													&= \lim_{x \to +\infty}\frac{x^{2}-4x+4 - x^2 + 2x}{x - 2 + \sqrt{x^2 - 2x}}\\
+													&= \lim_{x \to +\infty}\frac{-2x+4}{x - 2 + \sqrt{x^2 - 2x}}\\
+													&= \lim_{x \to +\infty}\frac{x\left( -2+\frac{4}{x}\right) }{x\left( 1 - \frac{2}{x} + \sqrt{1 - \frac{2}{x}}\right) }\\
+													&= \lim_{x \to +\infty}\frac{\left( -2+\frac{4}{x}\right) }{\left( 1 - \frac{2}{x} + \sqrt{1 - \frac{2}{x}}\right) }\\
+													&= -1
 \end{align*}
 \[
-\textcolor{green}{\boxed{ \lim_{x \to +\infty} f(x) = 0  }} \textbf{ 0,25 points}
+\textcolor{green}{\boxed{ \lim_{x \to +\infty} f(x) = -1  }} \textbf{ 0,25 points}
 \]
 \item La branche infinie de $(\mathcal{C}_{f}) $ en $-\infty$
 
@@ -216,7 +218,7 @@ Comme $\lim_{x \to -\infty} f(x) = +\infty$ Cherchons $\lim_{x \to -\infty} \fra
 \end{align*}
 \textcolor{green}{Donc $(\mathcal{C}_{f}) $ admet une branche parabolique de direction $(oy)$ au voisinage de $-\infty$}
 \item On a $\lim_{x \to -\infty} f(x)=0$
-\textcolor{green}{Donc $y=0$  est A.H à $(\mathcal{C}_{f}) $ au voisinage de $-\infty$}
+\textcolor{green}{Donc $y=-1$  est A.H à $(\mathcal{C}_{f}) $ au voisinage de $-\infty$}
 \end{enumerate}
 \item Étudions la dérivabilité de la fonction \( f \) à droite de 2 et à gauche de 0, puis interprétons géométriquement les résultats obtenus. \hspace{1cm} \textbf{(2 pt)}\\
 \underline{En $2^{+}:$}
@@ -345,17 +347,37 @@ Donc \( \forall x \in ]-\infty, 0], f'(x) > 0 \) et \( \forall x \in ]2, +\infty
    \tkzTabLine
      { , + , d , h , d, -, }
    \tkzTabVar
-   	{ -/$-\infty$ , +CH/-2, +C/0, -/0}
+   	{ -/$-\infty$ , +CH/-2, +C/0, -/-1}
     %{ -/1 , +DH/$+\infty$, -C/0, +/1}
 \end{tikzpicture}
 \end{center}
 \end{enumerate}
+\item 
+\end{enumerate}
+\begin{center}
 \begin{figure}[h]% Forcer l'image à cet endroit
 \centering
 \includegraphics[width=0.8\textwidth]{DevoirCurve.png}
 \caption{Courbe de (Cf)}
 \label{fig:monimage}
 \end{figure}
+\end{center}
+\underline{\textbf{Partie B :}}
+
+On considère la fonction \( g \) la restriction de la fonction \( f \) sur \( [2, +\infty[ \) :
+
+\begin{enumerate}
+\item[]
+\begin{enumerate}
+\item Montrons que \( g \) admet une fonction réciproque \( g^{-1} \) définie sur un intervalle \( J \)\\ que l’on déterminera . \hspace{1cm} \textbf{(0,5 pt)}
+    
+\( g \) est continue et strictement croissant décroissante sur \( [2, +\infty[ \) vers \( [-1, 0] \)
+   %\item Calculer \( g^{-1}(2 - 2\sqrt{2}) \). (On donne : \( g(4) = (2 - 2\sqrt{2} \)). \hspace{1cm} \textbf{(0,75 pt)}
+    
+    %\item Déterminer \( g^{-1}(x) \) pour tout \( x \in J \). \hspace{3cm} \textbf{(0,5 pt)}
+    
+    %\item Tracer la courbe \( (C_{g^{-1}}) \) dans le même repère orthonormé \( (O, \vec{i}, \vec{j}) \). \hspace{2cm} \textbf{(0,5 pt)}
+\end{enumerate}
 \end{enumerate}
 
 \end{document}
