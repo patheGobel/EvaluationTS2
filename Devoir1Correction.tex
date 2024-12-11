@@ -78,7 +78,7 @@ middle color = tcbcolback!80!black]
 \multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{Lycée de Dindéfélo}\ $\diamond$$\diamond$$\diamond$ }& \textbf{A.S. : 2024/2025} \\ \hline
 \textbf{Matière: Mathématiques}& \textbf{Niveau : T}\textbf{S2} &\textbf{Date: 09/12/2024} & \textbf{Durée : 4 heures} \\ \hline
 \multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
-\textbf{{\Large\sffamily Devoir n$ ^{\circ} $ 1 Du 1$ ^\text{\bf er} $ Semestre}}
+\textbf{{\Large\sffamily Correction du devoir n$ ^{\circ} $ 1 Du 1$ ^\text{\bf er} $ Semestre}}
 \end{center}}} \\ \hline
 \end{tabular}}\endgroup};
 \end{tikzpicture}
@@ -96,72 +96,48 @@ middle color = tcbcolback!80!black]
 \item Si \(f\) est continue et strictement décroissante sur \( ]-\infty; b] \), alors \( f(]-\infty; b]) = ... \)
 \end{enumerate}
 
-\section*{\underline{Exercice 2 :} 4 points}
+\section*{\textcolor{green}{\underline{Exercice 2 :} 4 points}}
 
 \begin{enumerate}
-    \item Calculer les limites suivantes : \textbf{(3 × 1 pt)}
-    \[
-    \lim_{x \to 0} \frac{\sqrt{1+\sin x} - 1}{\sin 2x} \; ; \quad
-    \lim_{x \to 0} \frac{\cos x - 1}{x^3 + x^2} \; ; \quad
-    \lim_{x \to 1} \frac{\sqrt{x + 3} - \sqrt{5 - x}}{\sqrt{2x + 7} - \sqrt{10 - x}}.
-    \]
+    \item Calculons les limites suivantes : \textbf{(3 × 1 pt)}
+    \begin{align*}
+    \lim_{x \to 0} \frac{\sqrt{1+\sin x} - 1}{\sin 2x}&=\lim_{x \to 0} \frac{\sin x }{\sin 2x\left( \sqrt{1+\sin x} + 1\right) }\\
+    &=\lim_{x \to 0} \frac{\frac{\sin x}{x} }{\frac{2\sin 2x}{2x}}\times \frac{1}{\left(\sqrt{1+\sin x} + 1\right)}\\
+    &=\frac{1}{2}\times\frac{1}{2}\\
+    &=\frac{1}{4}
+    \end{align*}
+\[
+\textcolor{green}{\boxed{ \lim_{x \to 0} \frac{\sqrt{1+\sin x} - 1}{\sin 2x}=\frac{1}{4}  }} \textbf{ 0,25 points}
+\]
+
+    \begin{align*}
+    \lim_{x \to 0} \frac{\cos x - 1}{x^3 + x^2}&=\lim_{x \to 0}\frac{\cos x - 1}{x^2(x + 1)}\\
+    &=\lim_{x \to 0} \frac{\cos x - 1}{x^{2}} \times \frac{1}{x+1}\\
+    &=-\frac{1}{2}\times1\\
+    &=-\frac{1}{2}
+    \end{align*}
+\[
+\textcolor{green}{\boxed{ \lim_{x \to 0} \frac{\cos x - 1}{x^3 + x^2}=-\frac{1}{2}  }} \textbf{ 0,25 points}
+\]
+
+    \begin{align*}
+    \lim_{x \to 1} \frac{\sqrt{x + 3} - \sqrt{5 - x}}{\sqrt{2x + 7} - \sqrt{10 - x}}&=\lim_{x \to 0}\frac{\left( \sqrt{x + 3} - \sqrt{5 - x}\right)\left( \sqrt{x + 3} + \sqrt{5 - x}\right)\left( \sqrt{2x + 7} - \sqrt{10 - x}\right) }{\left( \sqrt{2x + 7} - \sqrt{10 - x}\right) \left( \sqrt{2x + 7} - \sqrt{10 - x}\right) \left( \sqrt{x + 3} - \sqrt{5 - x}\right)}\\
+    &=\lim_{x \to 1} \frac{\left[ x + 3 - (5 - x)\right]\left( \sqrt{2x + 7} + \sqrt{10 - x}\right) }{ \left[  2x + 7 - (10 - x) \right]  \left( \sqrt{x + 3} + \sqrt{5 - x}\right)}\\
+    &=\lim_{x \to 1} \frac{2(-1+x)\left( \sqrt{2x + 7} + \sqrt{10 - x}\right) }{ 3( x - 1 )  \left( \sqrt{x + 3} + \sqrt{5 - x}\right)}\\
+    &=\lim_{x \to 1} \frac{-2(x-1)\left( \sqrt{2x + 7} + \sqrt{10 - x}\right) }{ 3( x - 1 )  \left( \sqrt{x + 3} + \sqrt{5 - x}\right)}\\
+    &=\lim_{x \to 1} \frac{-2\left( \sqrt{2x + 7} + \sqrt{10 - x}\right) }{ 3\left( \sqrt{x + 3} + \sqrt{5 - x}\right)}\\
+    &=\frac{-2}{3} \times \frac{6}{4}
+    \end{align*}
+\[
+\textcolor{green}{\boxed{ \lim_{x \to 1} \frac{\sqrt{x + 3} - \sqrt{5 - x}}{\sqrt{2x + 7} - \sqrt{10 - x}}=-1 }} \textbf{ 0,25 points}
+\]
     \item Donner les primitives des fonctions \(f\) et \(g\) respectivement sur \(\mathbb{R}\) et \(\mathbb{R} \setminus \{1; 2\}\). \textbf{(2 × 0,5 pt)}
     \[
     f(x) = (3x-1)(3x^2-2x+3)^3 \; ; \quad
     g(x) = \frac{1-x^2}{(x^3-3x+2)^3}.
     \]
 \end{enumerate}
-
-\section*{\underline{Problème :} 12 points}
-
-\underline{\textbf{Partie A :}}
-
-Soit \( f \) la fonction définie par :
-\[
-f(x) = x - 2 - \sqrt{x^2 - 2x}.
-\]
-
-\begin{enumerate}
-\item  Déterminer \( D_f \). \hspace{1cm} \textbf{(0,5 pt)}
-
-\begin{enumerate}
-    \item Calculer \( \lim_{x \to +\infty} f(x) \) et \( \lim_{x \to -\infty} f(x) \). \hspace{1cm} (0,25 pt), \textbf{(0,5 pt)}
-    \item Étudier la branche infinie de la courbe \( (C_f) \) au voisinage de \( -\infty \). \hspace{1cm} \textbf{(0,75 pt)}
-    \item Étudier la branche infinie de la courbe \( (C_f) \) au voisinage de \( +\infty \). \hspace{1cm} \textbf{(0,75 pt)}
-\end{enumerate}
-
-\item Étudier la dérivabilité de la fonction \( f \) à droite de 2 et à gauche de 0, puis interpréter géométriquement les résultats obtenus. \hspace{1cm} \textbf{(2 pt)}
-
-\begin{enumerate}
-    \item Justifier la dérivabilité de la fonction sur \( ]-\infty, 0] \cup ]2, +\infty[ \), puis\\ montrer que pour tout \( x \in ]-\infty, 0[ \cup ]2, +\infty[ \) :
-    \(
-    f'(x) = \frac{\sqrt{x^2 - 2x} - (x - 1)}{\sqrt{x^2 - 2x}}.
-    \)    \hspace{1cm} \textbf{(1,5 pt)}
-
-    
-    \item Montrer que : \( \forall x \in ]-\infty, 0], f'(x) > 0 \) et \( \forall x \in ]2, +\infty[, f'(x) < 0 \). \hspace{1cm} \textbf{(1 pt)}
-    
-    \item Dresser le tableau de variations de la fonction \( f \). \hspace{1cm} \textbf{(1,25 pt)}
-\end{enumerate}
-
-\item Tracer la courbe \( (C_f) \) dans un repère orthonormé \( (O, \vec{i}, \vec{j}) \). \hspace{1cm} \textbf{(1,25 pt)}
-
-\underline{\textbf{Partie B :}}
-
-On considère la fonction \( g \) la restriction de la fonction \( f \) sur \( [2, +\infty[ \) :
-
-\begin{enumerate}
-    \item Montrer que \( g \) admet une fonction réciproque \( g^{-1} \) définie sur un intervalle \( J \)\\ que l’on déterminera . \hspace{1cm} \textbf{(0,5 pt)}
-    
-    \item Calculer \( g^{-1}(2 - 2\sqrt{2}) \). (On donne : \( g(4) = (2 - 2\sqrt{2} \)). \hspace{1cm} \textbf{(0,75 pt)}
-    
-    \item Déterminer \( g^{-1}(x) \) pour tout \( x \in J \). \hspace{3cm} \textbf{(0,5 pt)}
-    
-    \item Tracer la courbe \( (C_{g^{-1}}) \) dans le même repère orthonormé \( (O, \vec{i}, \vec{j}) \). \hspace{2cm} \textbf{(0,5 pt)}
-\end{enumerate}
-
-\end{enumerate}
-\section*{\underline{Correction :} 12 points}
+\section*{\textcolor{green}{\underline{Correction :} 12 points}}
 \underline{\textbf{Partie A :}}
 
 Soit \( f \) la fonction définie par :
