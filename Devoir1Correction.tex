@@ -14,9 +14,11 @@ minimum size=1.2em,inner sep=0] (char) {#1};}}
 %%%::::::by chnini ameur :::::::%%%
 \everymath{\displaystyle}
 \usepackage[left=1cm,right=1cm,top=1cm,bottom=1.7cm]{geometry}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
 \usepackage{array,multirow}
 \usepackage[most]{tcolorbox}
 \usepackage{varwidth}
+\usepackage{float} %pour utiliser l'option [H] qui force l'image à apparaître exactement à l'endroit où elle est placée dans le code.
 \tcbuselibrary{skins,hooks}
 \usetikzlibrary{patterns}
 %%%::::::by chnini ameur :::::::%%%
@@ -355,7 +357,7 @@ Donc \( \forall x \in ]-\infty, 0], f'(x) > 0 \) et \( \forall x \in ]2, +\infty
 \item 
 \end{enumerate}
 \begin{center}
-\begin{figure}[h]% Forcer l'image à cet endroit
+\begin{figure}[H]% Forcer l'image à cet endroit
 \centering
 \includegraphics[width=0.8\textwidth]{DevoirCurve.png}
 \caption{Courbe de (Cf)}
@@ -393,5 +395,13 @@ Donc admet aussi une bijection réciproque de \( [-1, 0] \) vers \( [2, +\infty[
     %\item Tracer la courbe \( (C_{g^{-1}}) \) dans le même repère orthonormé \( (O, \vec{i}, \vec{j}) \). \hspace{2cm} \textbf{(0,5 pt)}
 \end{enumerate}
 \end{enumerate}
-
+\begin{center}
+\begin{figure}[H]% Forcer l'image à cet endroit
+\centering
+\includegraphics[width=0.8\textwidth]{DevoirCurveReciproque.png}
+\caption{Courbe de (Cf)}
+\label{fig:monimage}
+\end{figure}
+\end{center}
+\href{https://www.geogebra.org/classic/fmnqdcjv}{Clique ici pour voir la figure sur géogébra}
 \end{document}
