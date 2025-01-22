@@ -101,10 +101,48 @@ Soit \((v_n)_{n \in \mathbb{N}^*}\) la suite numérique définie par : \(v_n = \
         \item Calculer en fonction de \(n\) la somme : \(S_n = v_1 + v_2 + \cdots + v_n\).\hfill \textbf{1,5 pt}
     \end{enumerate}
 \end{enumerate}
+\section*{\textcolor{green}{\underline{Correction Exercice 1 :} 4 points [\textit{ Déjà corrigé en classe}]}}
+Soit \((u_n)_{n \in \mathbb{N}^*}\) la suite numérique définie par :
+\[
+\begin{cases}
+u_1 = \frac{1}{3}, \\
+(\forall n \in \mathbb{N}^*), \ u_{n+1} = \frac{2u_n}{1 + (n+2)u_n}.
+\end{cases}
+\]
+
+Soit \((v_n)_{n \in \mathbb{N}^*}\) la suite numérique définie par : \(v_n = \frac{1}{u_n} - n\).
+
+\begin{enumerate}
+    \item Montrons que la suite \((v_n)_{n \in \mathbb{N}^*}\) est géométrique.\hfill \textbf{1,5 pt}
+    
+\((v_n)\) est une suite géométrique ssi $\frac{v_{n+1}}{v_n}=q \in \mathbb{R}^{*}\setminus\{1\}$
+
+In fact : \\
+$
+\begin{aligned}
+\frac{v_{n+1}}{v_n}&=\frac{\frac{1}{u_{n+1}} - (n+1)}{\frac{1}{u_n} - n}\\
+									&=\frac{\frac{1}{\frac{2u_n}{1 + (n+2)u_n}} - (n+1)}{\frac{1 - nu_n}{u_n}}\\
+									&=\frac{\frac{{1 + (n+2)u_n}}{2u_n} - (n+1)}{\frac{1 - nu_n}{u_n}}\\
+									&=\frac{\frac{1 + (n+2)u_n - (n+1)2u_n}{2u_n}}{\frac{1 - nu_n}{u_n}}\\
+									&=\frac{\frac{1 + nu_n+2u_n - n2u_n-2u_n}{2u_n}}{\frac{1 - nu_n}{u_n}}\\
+									&=\frac{1 + nu_n+2u_n - n2u_n-2u_n}{2(1 - nu_n)}\\
+									&=\frac{1 - nu_n}{2(1 - nu_n)}\\
+									&=\frac{1}{2}\\
+\end{aligned}
+$
+
+\text{ Donc \(v_n\) est une suite gémétrique de raison \(\frac{1}{2}\) et de premier terme:} 
+\( v_1 = \frac{1}{u_1} - 1=\frac{1}{\frac{1}{3}} - 1=3 - 1 =2 \)    
+    %\item 
+    %\begin{enumerate}
+        %\item Déterminer \(v_n\) et \(u_n\) en fonction de \(n\).\hfill \textbf{1 pt}
+        %\item Calculer en fonction de \(n\) la somme : \(S_n = v_1 + v_2 + \cdots + v_n\).\hfill \textbf{1,5 pt}
+    %\end{enumerate}
+\end{enumerate}
 \section*{\underline{Exercice 2 (BAC 2022) :} 4 points [\textit{ Déjà corrigé en classe par moi-même}]}
 Le plan complexe est muni d’un repère orthonormé direct $(O; \vec{u}, \vec{v})$. Soit le nombre complexe $a$ défini par 
 \[
-a = \sqrt{2} - \sqrt{3} - i\sqrt{2} + \sqrt{3}.
+a = \sqrt{2 - \sqrt{3}} - i\sqrt{2 + \sqrt{3}}.
 \]
 
 \begin{enumerate}
