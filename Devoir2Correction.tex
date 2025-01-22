@@ -136,8 +136,27 @@ $
     \item 
     \begin{enumerate}
         \item Déterminons \(v_n\) et \(u_n\) en fonction de \(n\).\hfill \textbf{1 pt}
-        \(v_n\) est une suite géométrique donc \(v_n=v_p \times q^{n-p}\)
-        %\item Calculer en fonction de \(n\) la somme : \(S_n = v_1 + v_2 + \cdots + v_n\).\hfill \textbf{1,5 pt}
+        
+        \((v_n)\) est une suite géométrique donc \(v_n=v_p \times q^{n-p}\)
+        
+        Ainsi: \(v_n=2 \times \left( \frac{1}{2}\right)^{n-1}\)
+        
+        \(\boxed{\textcolor{green}{v_n=2 \times \left( \frac{1}{2}\right)^{n-1}}}\)
+        
+        On a \(v_n = \frac{1}{u_n} - n\) donc \(u_n = \frac{1}{v_n + n}\)
+        
+        Ainsi: \(u_n = \frac{1}{2 \times \left( \frac{1}{2}\right)^{n-1} + n}\)
+        \item Calculer en fonction de \(n\) la somme : \(S_n = v_1 + v_2 + \cdots + v_n\).\hfill \textbf{1,5 pt}
+        
+        \(
+        \begin{aligned}
+        S_n = v_1 + v_2 + \cdots + v_n &= v_1 \times \frac{1-\left( \frac{1}{2}\right)^{n-1+1} }{1-\frac{1}{2}}\\
+										&=2 \times \frac{1-\left( \frac{1}{2}\right)^{n} }{\frac{1}{2}}\\ 
+										&=4 \times \left[ 1-\left( \frac{1}{2}\right)^{n}\right] \\     
+        \end{aligned}
+        \)
+        
+        \(\boxed{\textcolor{green}{S_n=4 \times \left[ 1-\left( \frac{1}{2}\right)^{n}\right]}}\)
     \end{enumerate}
 \end{enumerate}
 \section*{\underline{Exercice 2 (BAC 2022) :} 4 points [\textit{ Déjà corrigé en classe par moi-même}]}
