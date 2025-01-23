@@ -17,6 +17,7 @@ minimum size=1.2em,inner sep=0] (char) {#1};}}
 \usepackage{array,multirow}
 \usepackage[most]{tcolorbox}
 \usepackage{varwidth}
+\usepackage{tkz-tab}
 \tcbuselibrary{skins,hooks}
 \usetikzlibrary{patterns}
 %%%::::::by chnini ameur :::::::%%%
@@ -404,5 +405,62 @@ f(x) =
         \item Tracer la courbe de $h^{-1}$ dans le même repère que celle de $f$.\hfill \textbf{( 0,5pt )}
     \end{enumerate}
 \end{enumerate}
+\section*{\textcolor{green}{\underline{Problème :} 9,75 pts [\textit{ Exercice d'application déjà corrigé par moi-même}]}}
+Soit $f$ la fonction définie par :
+\[
+f(x) =
+\begin{cases} 
+2x\sqrt{1 - x^2} & \text{si } x > 0 \\ 
+-x + \sqrt{x^2 - 2x} & \text{si } x \leq 0 
+\end{cases}
+\]
+\begin{enumerate}
+\item Déterminer $D_f$, les limites aux bornes et préciser la branche infinie.\hfill \textbf{( 0,5pt $\times$ 3)}
+\[\text{Posons }
+f(x) =
+\begin{cases} 
+f_1(x) & \text{si } x > 0, \\ 
+f_2(x) & \text{si } x \leq 0.
+\end{cases}
+\]
 
+\( \bullet \) \(f_1 \exists \text{ ssi } 1 - x^2 \geq 0 \text{ et } x > 0. \)
+
+\(\text{ Posnos } 1 - x^2 = 0 \text{ et } x = 0. \)
+
+\( 1 - x^2 = 0 \text{ et } x = 0 \implies x = -1 \text{ ou } x = 1 \text{ et } x = 0 \)
+
+    \begin{tikzpicture}[node style/.style={fill opacity=0,text opacity=1}]
+        \tkzTabInit[espcl=1.75]
+        {$x$/.5, $1 - x^2$/.7, $x$/.7}
+        {$-\infty$,$-1$,$0$,$1$,$+\infty$}
+        \tkzTabLine{,-,z,+,t,+,z,-}
+        \tkzTabLine{,-,t,-,z,+,t,+}
+    \end{tikzpicture}
+    
+    \underline{\( Df_1 = ]0;1] \)}
+    
+\( \bullet \) \(f_1 \exists \text{ ssi } x^2 - x \geq 0 \text{ et } x \leq 0. \) 
+
+\(\text{ Posnos } x^2 - x = 0 \text{ et } x = 0. \)
+
+\( x^2 - x = 0 \text{ et } x = 0 \implies x = 0 \text{ ou } x = 1 \text{ et } x = 0 \)  
+
+    \begin{tikzpicture}[node style/.style={fill opacity=0,text opacity=1}]
+        \tkzTabInit[espcl=1.75]
+        {$x$/.5, $x^2 - x$/.7, $x$/.7}
+        {$-\infty$,$0$,$1$,$+\infty$}
+        \tkzTabLine{,+,z,-,z,+}
+        \tkzTabLine{,-,z,+,t,+}
+    \end{tikzpicture}
+    
+    \underline{\( Df_1 = [-\infty;0] \)}
+	    
+	\( Df = Df_1 \cup Df_2 \)    
+    
+    \( Df = ]0;1] \cup [-\infty;0] \)
+    
+    \[ \boxed{\textcolor{green}{Df = [-\infty;1]}} \textbf{ ( 0,5pt )} \] 
+    
+\end{enumerate}
 \end{document}
