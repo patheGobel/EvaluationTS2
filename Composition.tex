@@ -81,7 +81,101 @@ middle color = tcbcolback!80!black]
 \end{tikzpicture}
 \vspace{3cm}
 
-\section*{\underline{Exercice 1 :} $0,5 \times 8 = 4$ points}
+\section*{\underline{Exercice 1 :} $1,5$ points}
+
+
+\textbf{1. Déterminons les racines cubiques de l'unité.}
+
+Résolvons pour cela $z^3 = 1$, $z \in \mathbb{C}$ :
+
+\[
+z^3 = 1 \implies z^3 = e^{i(0+2k\pi)}, \quad k \in \mathbb{Z}.
+\]
+
+\[
+z = e^{i\frac{(0+2k\pi)}{3}}, \quad k = 0, 1, 2.
+\]
+
+- Pour $k = 0$, $z = e^{i0} = 1$, donc $z_0 = 1$.
+
+- Pour $k = 1$, $z = e^{i\frac{2\pi}{3}} = \cos\frac{2\pi}{3} + i\sin\frac{2\pi}{3} = -\frac{1}{2} + i\frac{\sqrt{3}}{2}$, donc $z_1 = -\frac{1}{2} + i\frac{\sqrt{3}}{2}$.
+
+- Pour $k = 2$, $z = e^{i\frac{4\pi}{3}} = \cos\frac{4\pi}{3} + i\sin\frac{4\pi}{3} = -\frac{1}{2} - i\frac{\sqrt{3}}{2}$, donc $z_2 = -\frac{1}{2} - i\frac{\sqrt{3}}{2}$.
+
+Ainsi, l'ensemble des solutions est :
+
+\[
+S_{\mathbb{C}} = \left\{ 1, -\frac{1}{2} + i\frac{\sqrt{3}}{2}, -\frac{1}{2} - i\frac{\sqrt{3}}{2} \right\}.
+\]
+
+\textbf{1. Interprétation}
+
+\begin{itemize}
+    \item $\text{arg}(z_B - z_A) = (\overrightarrow{OI}, \overrightarrow{AB}) \, [2\pi]$
+    
+    Géométriquement, $\text{arg}(z_B - z_A)$ est l'angle $\widehat{(\overrightarrow{OI}, \overrightarrow{AB})}$ formé par le vecteur $\overrightarrow{AB}$ avec l'axe réel du plan complexe $(O, \overrightarrow{OI})$.
+
+    \item $\text{arg}\left(\frac{z_B - z_C}{z_B - z_A}\right) = (\overrightarrow{AB}, \overrightarrow{CD}) \, [2\pi]$
+    
+    Géométriquement, $\text{arg}\left(\frac{z_B - z_C}{z_B - z_A}\right)$ est l'angle $\widehat{(\overrightarrow{AB}, \overrightarrow{CD})}$ que forment les vecteurs $\overrightarrow{AB}$ et $\overrightarrow{CD}$.
+\end{itemize}
+
+\textbf{3. $f(x) = \sqrt{x}$, appliquons l'IAF}
+
+Appliquons l'IAF (Inégalité des Accroissements Finis) sur $[l, l+1]$.
+
+\textbf{TI-AF 1}
+
+Si $f$ est continue sur $[a, b]$ et dérivable sur $]a, b[$, avec 
+\[
+\exists (m, M) \in \mathbb{R}, \forall x \in [a, b], \quad \text{tel que } m \leq f'(x) \leq M,
+\]
+alors :
+\[
+m(b-a) \leq f(b) - f(a) \leq M(b-a).
+\]
+
+\textbf{TI-AF 2}
+
+Si $f$ est continue sur $[a, b]$ et dérivable sur $]a, b[$, avec 
+\[
+\exists m \in \mathbb{R}_{+}, \forall x \in [a, b], \quad \text{tel que } |f'(x)| \leq m,
+\]
+alors :
+\[
+|f(b) - f(a)| \leq m|b-a|.
+\]
+
+\newpage
+\textbf{Applications} $t > 0$
+
+\begin{itemize}
+    \item $f$ est continue sur $[t, t+1]$.
+    \item $f$ est dérivable sur $]t, t+1[$ et pour tout,
+\[
+    \forall x \in ]t, t+1[, \quad f'(x) = \frac{1}{2\sqrt{x}}.
+\]
+\end{itemize}
+
+Comme $x \in ]t, t+1[$, alors $t < x < t+1$. Ainsi, 
+\[
+\frac{1}{2\sqrt{t+1}} < \frac{1}{2\sqrt{x}} < \frac{1}{2\sqrt{t}}.
+\]
+
+D'où :
+\[
+\frac{1}{2\sqrt{t+1}} < f'(x) < \frac{1}{2\sqrt{t}}.
+\]
+
+En appliquant l'inégalité des accroissements finis (IAF), nous avons :
+\[
+\frac{1}{2\sqrt{t+1}}(t+1-t) < f(t+1) - f(t) < \frac{1}{2\sqrt{t}}(t+1-t).
+\]
+
+Cela donne :
+\[
+\frac{1}{2\sqrt{t+1}} < f(t+1) - f(t) < \frac{1}{2\sqrt{t}}.
+\]
 
 
 \section*{\underline{Exercice 2 :} 4 points}
