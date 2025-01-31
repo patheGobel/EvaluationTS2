@@ -83,8 +83,9 @@ middle color = tcbcolback!80!black]
 
 \section*{\underline{Exercice 1 :} $1,5$ points}
 
+\begin{enumerate}
 
-\textbf{1. Déterminons les racines cubiques de l'unité.}
+\item Déterminons les racines cubiques de l'unité.
 
 Résolvons pour cela $z^3 = 1$, $z \in \mathbb{C}$ :
 
@@ -108,7 +109,7 @@ Ainsi, l'ensemble des solutions est :
 S_{\mathbb{C}} = \left\{ 1, -\frac{1}{2} + i\frac{\sqrt{3}}{2}, -\frac{1}{2} - i\frac{\sqrt{3}}{2} \right\}.
 \]
 
-\textbf{1. Interprétation}
+\item Interprétation
 
 \begin{itemize}
     \item $\text{arg}(z_B - z_A) = (\overrightarrow{OI}, \overrightarrow{AB}) \, [2\pi]$
@@ -120,7 +121,7 @@ S_{\mathbb{C}} = \left\{ 1, -\frac{1}{2} + i\frac{\sqrt{3}}{2}, -\frac{1}{2} - i
     Géométriquement, $\text{arg}\left(\frac{z_B - z_C}{z_B - z_A}\right)$ est l'angle $\widehat{(\overrightarrow{AB}, \overrightarrow{CD})}$ que forment les vecteurs $\overrightarrow{AB}$ et $\overrightarrow{CD}$.
 \end{itemize}
 
-\textbf{3. $f(x) = \sqrt{x}$, appliquons l'IAF}
+\item $f(x) = \sqrt{x}$, appliquons l'IAF
 
 Appliquons l'IAF (Inégalité des Accroissements Finis) sur $[l, l+1]$.
 
@@ -177,12 +178,208 @@ Cela donne :
 \frac{1}{2\sqrt{t+1}} < f(t+1) - f(t) < \frac{1}{2\sqrt{t}}.
 \]
 
+\end{enumerate}
 
-\section*{\underline{Exercice 2 :} 4 points}
+\section*{\underline{Exercice 2 :} 8,5 points}
 
+\subsection*{ Partie A}
+\begin{enumerate}
+\item Montrons que $P$ admet une unique racine réelle.
 
+Soit $z_0 = a \in \mathbb{R}$ tel que $P(z_0) = 0$.
 
-\section*{\underline{Problème :} 12 points}
+\[
+P(z) = z^3 + (-5 + 2i)z^2 + (7 - 7i)z - 2 + 6i
+\]
+
+\[
+P(z_0) = 0 \implies a^3 + (-5 + 2i)a^2 + (7 - 7i)a - 2 + 6i = 0
+\]
+
+\[
+\implies a^3 - 5a^2 + 7a - 2 + i\big(2a^2 - 7a + 6\big) = 0
+\]
+
+En séparant les parties réelle et imaginaire :
+\[
+\begin{cases}
+a^3 - 5a^2 + 7a - 2 = 0 \quad (1) \\
+2a^2 - 7a + 6 = 0 \quad (2)
+\end{cases}
+\]
+
+L'équation (2) est plus facile à résoudre.
+
+Résolution de (2)
+
+\[
+2a^2 - 7a + 6 = 0
+\]
+
+Calculons le discriminant :
+\[
+\Delta = 7^2 - 4 \times 2 \times 6 = 49 - 48 = 1.
+\]
+
+Les solutions sont :
+\[
+a_1 = \frac{-(-7) - \sqrt{\Delta}}{2 \times 2} = \frac{7 - 1}{4} = \frac{6}{4} = \frac{3}{2},
+\]
+\[
+a_2 = \frac{-(-7) + \sqrt{\Delta}}{2 \times 2} = \frac{7 + 1}{4} = \frac{8}{4} = 2.
+\]
+
+La racine de (2) qui vérifie (1) est la racine de $P(z)$.
+
+Vérification pour $a = \frac{3}{2}$
+
+\underline{Substituons $a = \frac{3}{2}$ dans (1) :}
+\begin{align*}
+a^3 - 5a^2 + 7a - 2 &= \left(\frac{3}{2}\right)^3 - 5\left(\frac{3}{2}\right)^2 + 7\left(\frac{3}{2}\right) - 2\\
+										&=\frac{27}{8} - 5 \times \frac{9}{4} + \frac{21}{2} - 2\\
+										&=\frac{27}{8} - \frac{45}{8} + \frac{84}{8} - \frac{16}{8}\\
+										&=\frac{27 - 45 + 84 - 16}{8}\\
+										&= \frac{111 - 106}{8} = \frac{5}{8} \neq 0
+\end{align*}
+
+Donc, $a = \frac{3}{2}$ n'est pas solution.
+
+\underline{Vérification pour $a = 2$}
+
+Substituons $a = 2$ dans (1) :
+
+\begin{align*}
+a^3 - 5a^2 + 7a - 2 &= 2^3 - 5(2^2) + 7(2) - 2\\
+										&=8 - 20 + 14 - 2\\
+										&=0
+\end{align*}
+
+Donc, $a = 2$ est une solution.
+
+\[
+z_0 = 2.
+\]
+
+\item Factorisons $P(z)$
+
+Utilisons la méthode de la division synthétique pour factoriser $P(z)$. Le tableau est donné ci-dessous :
+
+\[
+\begin{array}{|c|c|c|c|c|}
+\hline
+\text{ } & 1 & -5+2i & 7-7i & 2+6i \\ 
+\hline
+2 & \downarrow & 2 & -6+i & 2-6i \\ 
+\hline
+\text{ } & 1 & -3+2i & 1-3i & 0 \\ 
+\hline
+\end{array}
+\]
+
+Ainsi, nous avons :
+\[
+P(z) = (z - 2)\big(z^2 + (-3+2i)z + 1-3i\big).
+\]
+
+\item Résolvons $P(z) = 0$
+
+\[
+P(z) = 0 \implies z = 2 \quad \text{ou} \quad z^2 + (-3+2i)z + 1-3i = 0.
+\]
+
+\begin{align*}
+\Delta &= (-3+2i)^2 - 4(1)(1-3i)\\
+ 			 &= 9 - 12i - 4 + 12i\\
+	     &= 5
+\end{align*}
+
+\[
+z_{1} = \frac{3-\sqrt{5}}{2}-i, z_{2} = \frac{3+\sqrt{5}}{2}-i
+\]
+
+\[
+S = \left\{ 2, \frac{3-\sqrt{5}}{2}-i, \frac{3+\sqrt{5}}{2}-i \right\}.
+\]
+
+\end{enumerate}
+\subsection*{ Partie B}
+
+\begin{enumerate}
+\item Représentation
+
+\begin{center}
+\begin{tikzpicture}[scale=2]
+
+    % Axes avec origine décalée à gauche
+    \draw[->] (-1,0) -- (3.5,0) node[below] {\( \text{Re} \)};
+    \draw[->] (0,-1.5) -- (0,2.5) node[left] {\( \text{Im} \)};
+    
+    % Cercle unité pour illustration de l'angle
+    \draw[dashed, gray] (0,0) circle(1);
+
+    % Points
+    \filldraw[red] (2,-1) circle(2pt) node[below right] {\( A(2,-1) \)};
+    \filldraw[red] (2,0) circle(2pt) node[above right] {\( B(2) \)};
+    \filldraw[red] (1,-1) circle(2pt) node[below left] {\( C(1,-1) \)};
+    \filldraw[red] (1,0) circle(2pt) node[above left] {\( D(1) \)};
+    
+    % Lignes de connexion
+    \draw[thick, dashed, blue] (2,-1) -- (2,0) -- (1,0) -- (1,-1) -- cycle;
+    
+    % Angle de π/3
+    \draw[thick] (0.7,0) arc[start angle=0, end angle=60, radius=0.7];
+    \node at (0.9,0.3) {\(\frac{\pi}{3}\)};
+    
+    % Vecteur illustrant un nombre complexe sur le cercle
+    \draw[thick, ->] (0,0) -- (cos{60},sin{60});
+    
+\end{tikzpicture}
+\end{center}
+
+\item Écriture exponentielle de $z_C$ et $z_E$
+
+\underline{Pour $z_C$ :}
+
+\begin{align*}
+z_C &= 1 - i\\
+		&= \sqrt{2} \left(\cos\left(-\frac{\pi}{4}\right) + i\sin\left(-\frac{\pi}{4}\right)\right)\\
+		&= \sqrt{2} e^{-i\pi/4}\\
+\end{align*}
+ \[ \boxed{ z_C=\sqrt{2} e^{-i\pi/4}} \]
+\underline{Pour $z_E$ :}
+
+\begin{align*}
+z_E &= 1 + i\sqrt{3}\\
+	  &= 2 \left(\frac{1}{2} + i\frac{\sqrt{3}}{2}\right)\\
+		&= 2 \left(\cos\left(\frac{\pi}{3}\right) + i\sin\left(\frac{\pi}{3}\right)\right)\\
+		&= 2 e^{i\pi/3}
+\end{align*}
+
+Donc :
+\[ \boxed{z_E = 2 e^{i\pi/3}} \]
+
+\item 3. Plaçons exactement le point $E$
+
+\[
+z_E = 2 e^{i\pi/3}.
+\]
+
+\item Écriture algébrique de $z_E^8$
+
+\begin{align*}
+z_E = 2 e^{i\pi/3} &\implies z_E^8 = 2^8 e^{8i\pi/3}\\
+                   &\implies z_E^8=2^8 \left[\cos\left(\frac{2\times 3\pi}{3}+\frac{2\pi}{3}\right) + i\sin\left(\frac{2\times 3\pi}{3}+\frac{2\pi}{3}\right)\right]\\
+										&\implies z_E^8=\left[\cos\left(2\pi+\frac{2\pi}{3}\right) + i\sin\left(2\pi+\frac{2\pi}{3}\right)\right]\\
+										&\implies z_E^8 = 2^8 \left(-\frac{1}{2} + i\frac{\sqrt{3}}{2}\right)
+\end{align*}
+
+\[
+\boxed{z_E^8 = 2^8 \left(-\frac{1}{2} + i\frac{\sqrt{3}}{2}\right)}.
+\]
+
+\end{enumerate}
+
+\section*{\underline{Problème :} 10 points}
 
 
 \end{document}
