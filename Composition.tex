@@ -399,7 +399,7 @@ I = \text{bar}\{(A,1); (C,-2)\} &\implies \overrightarrow{AI} = \frac{-2}{1-2} \
 On a: $ J = \text{bar}\{(A,1); (C,2)\} $
 
 \begin{align*}
-\text{Donc } \overrightarrow{AJ} = \frac{2}{1+2} \overrightarrow{AB} &\implies \overrightarrow{AJ} = \frac{2}{3} \overrightarrow{AC}\\
+\text{Donc } J = \text{bar}\{(A,1); (C,2)\} &\implies \overrightarrow{AJ} = \frac{2}{1+2} \overrightarrow{AC}\\
 															 &\implies Z_J - Z_A = \frac{2}{3} Z_C - \frac{2}{3} Z_A\\
                                &\implies Z_J = \frac{2}{3} Z_C + \frac{1}{3} Z_A\\
                                &\implies Z_J = \frac{2}{3} (1 - i) + \frac{1}{3} (2 - i)\\
@@ -409,6 +409,59 @@ On a: $ J = \text{bar}\{(A,1); (C,2)\} $
 
 \[
 \boxed{Z_J = \frac{4}{3} - i}
+\]
+
+\item Donner un module et un argument de $\frac{Z_B - Z_A}{Z_C - Z_A}$
+
+\begin{align*}
+\frac{Z_B - Z_A}{Z_C - Z_A} &= \frac{2 - (2 - i)}{1 - i - (2 - i)}\\
+														&= \frac{i}{-1}\\
+														&= i
+\end{align*}
+
+\[
+\text{Donc } \boxed{\frac{Z_B - Z_A}{Z_C - Z_A} = i}
+\]
+
+\textbf{Module}
+
+\[
+\left| \frac{Z_B - Z_A}{Z_C - Z_A} \right| = |i| = 1
+\]
+
+\textbf{Un Argument}
+
+\[
+\arg\left( \frac{Z_B - Z_A}{Z_C - Z_A} \right) = \frac{\pi}{2}
+\]
+
+\item Nature de $ABC$
+
+\[
+\begin{cases}
+\left| \frac{Z_B - Z_A}{Z_C - Z_A} \right| = 1\\
+\arg\left( \frac{Z_B - Z_A}{Z_C - Z_A} \right) = \frac{\pi}{2} 
+\end{cases}\implies
+\begin{cases}
+AB = AC\\
+\left(\overrightarrow{AC},\overrightarrow{AB} \right) = \frac{\pi}{2}
+\end{cases}
+\]
+%\left( \widehat{ACB}, \widehat{CAB} \right) = \frac{\pi}{2}
+\[
+\text{Donc } ABC \text{ est un triangle rectangle et isocèle en } A.
+\]
+
+\item Montrons que $A, B, C, D$ sont cocycliques
+
+On a :
+
+\[
+BD = |Z_D - Z_B| = |1 - 2i| = 1
+\]
+
+\[
+DC = |Z_C - Z_D| = |1 - i - 2i| = 1
 \]
 \end{enumerate}
 
