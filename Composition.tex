@@ -457,14 +457,153 @@ AB = AC\\
 On a :
 
 \[
-BD = |Z_D - Z_B| = |1 - 2i| = 1
+BD = |Z_D - Z_B| = |1 - 2| = 1
 \]
 
 \[
-DC = |Z_C - Z_D| = |1 - i - 2i| = 1
+DC = |Z_C - Z_D| = |i - i - 1| = 1
+\]
+
+\textbf{Conclusion} 
+
+\[
+\text{donc } AB = AC = BD = DC \quad \text{et} \quad \widehat{(AC, AB)} = \frac{\pi}{2}.
+\]
+
+\[
+\text{donc } ABDC \text{ est un carré, donc il est inscrit dans un cercle } \mathcal{C}\left(I, \right) .
+\]
+
+\[
+\text{Tel que les sommets de } ABCD \text{ appartiennent à } \mathcal{C}, \text{ avec } \mathcal{C}(O,1).
+\]
+
+\item Forme exponentielle de $Z$ et Écriture algébrique $Z$
+
+\begin{enumerate}
+\item Forme exponentielle de $Z$
+\[
+Z = \frac{Z_E}{Z_C}
+\]
+
+
+\begin{align*}
+\begin{cases}
+Z_E = 2 e^{i\pi/3}\\
+Z_C = \sqrt{2} e^{-i\pi/4}
+\end{cases}
+&\iff Z = \frac{2 e^{i\pi/3}}{\sqrt{2} e^{-i\pi/4}}\\
+&\iff Z = \sqrt{2} e^{i(\pi/3 + \pi/4)}\\
+&\iff Z = \sqrt{2} e^{i\frac{7\pi}{12}}
+\end{align*}
+\[
+\boxed{Z = \sqrt{2} e^{i\frac{7\pi}{12}}}
+\]
+
+\item Les valeurs de $\cos\frac{7\pi}{12}$ et $\sin\frac{7\pi}{12}$
+
+Écriture algébrique de $Z$
+\begin{align*}
+Z = \frac{Z_E}{Z_C}\iff Z &= \frac{1 + i\sqrt{3}}{1 - i}\\
+  &= \frac{(1 + i\sqrt{3})(1 + i)}{(1 - i)(1 + i)}\\
+ &= \frac{(1 + i\sqrt{3})(1 + i)}{2}\\
+ &= \frac{1 + \sqrt{3}i + i - \sqrt{3}}{2}\\
+Z &= \frac{1 - \sqrt{3}}{2} + i \frac{1 + \sqrt{3}}{2}
+\end{align*}
+
+\begin{align*}
+Z &= \sqrt{2} e^{i\frac{7\pi}{12}}\\
+Z &= \sqrt{2} \left[\cos\left(\frac{7\pi}{12}\right) + i\sin\left(\frac{7\pi}{12}\right)\right].
+\end{align*}
+
+\[
+\text{Par identification : }\cos\left(\frac{7\pi}{12}\right) = \frac{\frac{1 - \sqrt{3}}{2}}{\sqrt{2}}, \quad \sin\left(\frac{7\pi}{12}\right) = \frac{\frac{1 + \sqrt{3}}{2}}{\sqrt{2}}.
+\]
+
+\[
+\text{D'où : }\boxed{\cos\left(\frac{7\pi}{12}\right) = \frac{\sqrt{2} - \sqrt{6}}{4}, \quad \sin\left(\frac{7\pi}{12}\right) = \frac{\sqrt{2} + \sqrt{6}}{4}}.
 \]
 \end{enumerate}
 
+\end{enumerate}
+\subsection*{ Partie C}
+
+Soit $f$ définie par :
+$$
+\begin{array}{rcl}
+f : \mathbb{P} \setminus \{c(1 - i)\}&\to& \mathbb{P}\\
+Z &\mapsto &\frac{Z - 2i}{Z - 1 + i}
+\end{array}
+$$
+\begin{enumerate}
+\item Expression de $OM'$ en fonction de $MA$ et $MC$
+On a :
+\[
+Z' = \frac{Z - 2i}{Z - 1 + i}.
+\]
+
+\[
+Z' = \frac{Z - (2 + i)}{Z - (1 + i)}.
+\]
+
+\[
+Z' = \frac{Z_M - Z_A}{Z_M - Z_C}.
+\]
+
+\[
+|Z'_M| = \left|\frac{Z_M - Z_A}{Z_M - Z_C}\right|.
+\]
+
+\[
+OM' = \frac{MA}{MC}.
+\]
+
+\[
+\boxed{OM' = \frac{MA}{MC}}
+\]
+\item Une interprétation géométrique de $\arg(Z')$
+
+$\arg(Z')=\arg\left( \frac{Z_M - Z_A}{Z_M - Z_C} \right) = \left( \overrightarrow{CM};\overrightarrow{AM} \right) = \left( \overrightarrow{MC};\overrightarrow{MA} \right) $
+
+Géométriquement, $\arg(Z')$ représente l'angle orienté entre les vecteurs $\overrightarrow{CM}$ et $\overrightarrow{AM}$.
+\item L'ensemble des points M pour $Z'$ soit un réel non nul.
+ \[
+    Z' = \frac{Z_M - Z_A}{Z_M - Z_C}.
+    \]
+
+    Pour que $Z'$ soit un réel non nul, deux conditions doivent être satisfaites :
+    \begin{enumerate}
+        \item \( Z_M \neq Z_A \), car le numérateur ne doit pas être nul.
+        \item \( Z_M \neq Z_C \), car le dénominateur ne doit pas être nul.
+    \end{enumerate}
+
+    Ensuite, pour que \( Z' \) soit un réel, l'argument de \(\frac{Z_M - Z_A}{Z_M - Z_C}\) doit être nul ou un multiple de \(\pi\),\\$\arg(Z')=\arg\left( \frac{Z_M - Z_A}{Z_M - Z_C} \right)=0[\pi]$, ce qui implique que les vecteurs \(\overrightarrow{CM}\) et \(\overrightarrow{AM}\) sont colinéaires.
+
+    En termes géométriques, cela signifie que \( M \) appartient à la droite passant par \( A \) et \( C \), à l'exclusion des points \( A \) et \( C \).
+
+    L'ensemble des points \( M \) est donc donné par :
+    \[
+    \mathcal{D} = \{M \in \mathbb{C} \mid M \in \text{droite}(A, C) \setminus \{A, C\}\}.
+    \]
+\item Donner et construire l'ensemble des points M tel que \( |Z'|=2 \)
+\[
+|Z'_M| = \left|\frac{Z_M - Z_A}{Z_M - Z_C}\right|=OM = \frac{MA}{MC}.
+\]
+
+\begin{align*}
+MA =2MC &\implies (MA)^{2} =(2MC)^{2}\\
+				&\implies (MA)^{2} -(2MC)^{2}=0\\
+				&\implies (\overrightarrow{MA} - 2\overrightarrow{MC}).(\overrightarrow{MA} + 2\overrightarrow{MC}) = 0\\
+\text{Or }  I = \text{bar}\{(A,1); (C,-2)\} et J = \text{bar}\{(A,1); (C,2)\}\\
+				&\implies -3\overrightarrow{MI}.\overrightarrow{MJ} = 0\\
+				&\implies \overrightarrow{MI}.\overrightarrow{MJ} = 0\\
+\end{align*}
+
+L'ensemble des points \( M \) est donc un cercle de centre $\frac{z_I+z_J}{2}$ et de rayon $\frac{|z_I-z_J|}{2}$
+\[
+\mathcal{C} = \{M \in \math{C} \}.
+\]
+\end{enumerate}
 \section*{\underline{Problème :} 10 points}
 
 application du théorème des inégalité des accroissement finie
