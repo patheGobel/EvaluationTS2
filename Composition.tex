@@ -471,12 +471,25 @@ DC = |Z_C - Z_D| = |i - i - 1| = 1
 \]
 
 \[
-\text{donc } ABDC \text{ est un carré, donc il est inscrit dans un cercle } \mathcal{C}\left(I, \right) .
+\text{donc } ABDC \text{ est un carré, donc il est inscrit dans un cercle } \mathcal{C}\left(\frac{z_{A}+z_{D}}{2},\frac{|z_{A}-z_{D}|}{2} \right) .
 \]
 
 \[
-\text{Tel que les sommets de } ABCD \text{ appartiennent à } \mathcal{C}, \text{ avec } \mathcal{C}(O,1).
+\text{Tel que les sommets de } ABCD \text{ appartiennent à } \mathcal{C}.
 \]
+
+\begin{align*}
+\frac{z_{A}+z_{D}}{2}&=\frac{2-i+1}{2}\\
+					 &=\frac{3-i}{2}\\
+\end{align*}
+
+\begin{align*}
+\frac{|z_{A}-z_{D}|}{2}&=\frac{|2-i-1|}{2}\\
+						&=\frac{|1-i|}{2}\\
+						&=\frac{\sqrt{2}}{2}
+\end{align*}
+
+$$ \boxed{\mathcal{C}\left( \left( \frac{3-i}{2} \right) , \frac{\sqrt{2}}{2} \right)} $$
 
 \item Forme exponentielle de $Z$ et Écriture algébrique $Z$
 
@@ -594,15 +607,27 @@ Géométriquement, $\arg(Z')$ représente l'angle orienté entre les vecteurs $\
 MA =2MC &\implies (MA)^{2} =(2MC)^{2}\\
 				&\implies (MA)^{2} -(2MC)^{2}=0\\
 				&\implies (\overrightarrow{MA} - 2\overrightarrow{MC}).(\overrightarrow{MA} + 2\overrightarrow{MC}) = 0\\
-\text{Or }  I = \text{bar}\{(A,1); (C,-2)\} et J = \text{bar}\{(A,1); (C,2)\}\\
+\text{Or }  I = \text{bar}\{(A,1); (C,-2)\} \text{ et } J = \text{bar}\{(A,1); (C,2)\}\\
+				&\implies (1-2)\overrightarrow{MI}.(2+1)\overrightarrow{MJ} = 0\\
 				&\implies -3\overrightarrow{MI}.\overrightarrow{MJ} = 0\\
-				&\implies \overrightarrow{MI}.\overrightarrow{MJ} = 0\\
+				&\implies \overrightarrow{MI}.\overrightarrow{MJ} = 0
 \end{align*}
 
-L'ensemble des points \( M \) est donc un cercle de centre $\frac{z_I+z_J}{2}$ et de rayon $\frac{|z_I-z_J|}{2}$
-\[
-\mathcal{C} = \{M \in \math{C} \}.
-\]
+\( M \) décrit donc un cercle de centre $\frac{z_I+z_J}{2}$ et de rayon $\frac{|z_I-z_J|}{2}$
+
+$ \frac{z_I+z_J}{2} = \frac{ -i+\left( \frac{4}{3} - i\right) }{2} $ et $\frac{|z_I-z_J|}{2}=\frac{|-i-\left( \frac{4}{3} - i\right)|}{2} $
+
+$ \frac{z_I+z_J}{2} = \frac{ \left( \frac{4}{3} - 2i\right) }{2} $ et $\frac{|z_I-z_J|}{2}=\frac{|-\frac{4}{3}|}{2} $
+
+$ \frac{z_I+z_J}{2} = \frac{ \left( \frac{4 - 6i}{3}\right) }{2} $ et $\frac{|z_I-z_J|}{2}=\frac{4}{6} $
+
+$ \frac{z_I+z_J}{2} = \frac{4 - 6i}{6} $ et $\frac{|z_I-z_J|}{2}=\frac{4}{6} $
+
+$ \frac{z_I+z_J}{2} = \frac{2 - 3i}{3} $ et $\frac{|z_I-z_J|}{2}=\frac{4}{6} $
+
+$ \frac{z_I+z_J}{2} = \frac{2}{3}-i $ et $\frac{|z_I-z_J|}{2}=\frac{4}{6} $
+
+$$ \text{Finalement : } \boxed{\mathcal{C}\left( \left( \frac{2}{3}-i \right)  ;\frac{4}{6}\right)} $$
 \end{enumerate}
 \section*{\underline{Problème :} 10 points}
 
