@@ -14,9 +14,11 @@ minimum size=1.2em,inner sep=0] (char) {#1};}}
 %%%::::::by chnini ameur :::::::%%%
 \everymath{\displaystyle}
 \usepackage[left=1cm,right=1cm,top=1cm,bottom=1.7cm]{geometry}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
 \usepackage{array,multirow}
 \usepackage[most]{tcolorbox}
 \usepackage{varwidth}
+\usepackage{float} %pour utiliser l'option [H] qui force l'image à apparaître exactement à l'endroit où elle est placée dans le code.
 \tcbuselibrary{skins,hooks}
 \usetikzlibrary{patterns}
 %%%::::::by chnini ameur :::::::%%%
@@ -46,6 +48,7 @@ middle color = tcbcolback!80!black]
 \usepackage{fancyhdr}
 \usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
 % Commande pour ajouter du texte en arrière-plan
+\usepackage{tkz-tab}
 \AddToShipoutPicture{
     \AtTextCenter{%
         \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.7}{\fontsize{5cm}{5cm}\selectfont PGB}}}
@@ -58,7 +61,7 @@ middle color = tcbcolback!80!black]
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footruleskip}{10pt}
 \fancyfoot[R]{
-\color{blue}\ding{45}\ \textbf{2025}
+\color{blue}\ding{45}\ \textbf{2024}
 }
 \fancyfoot[L]{
 \color{blue}\ding{45}\ \textbf{Prof:M. BA}
@@ -73,9 +76,9 @@ middle color = tcbcolback!80!black]
 \node[draw=blue,line width=1.2pt,fill=purple,text=blue,inner sep=3mm,rounded corners,pattern=dots]at ([yshift=-2.5cm]current page.north) {\begingroup\setlength{\fboxsep}{0pt}\colorbox{white}{\begin{tabular}{|*1{>{\centering \arraybackslash}p{0.28\textwidth}} |*2{>{\centering \arraybackslash}p{0.2\textwidth}|} *1{>{\centering \arraybackslash}p{0.19\textwidth}|} }
 \hline
 \multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{Lycée de Dindéfélo}\ $\diamond$$\diamond$$\diamond$ }& \textbf{A.S. : 2024/2025} \\ \hline
-\textbf{Matière: Mathématiques}& \textbf{Niveau : T}\textbf{S2} &\textbf{Date: 30/01/2024} & \textbf{Durée : 4 heures} \\ \hline
+\textbf{Matière: Mathématiques}& \textbf{Niveau : T}\textbf{S2} &\textbf{Date: 09/12/2024} & \textbf{Durée : 4 heures} \\ \hline
 \multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
-\textbf{{\Large\sffamily composition n$ ^{\circ} $ 1 Du 1$ ^\text{\bf er} $ Semestre}}
+\textbf{{\Large\sffamily Correction du devoir n$ ^{\circ} $ 1 Du 1$ ^\text{\bf er} $ Semestre}}
 \end{center}}} \\ \hline
 \end{tabular}}\endgroup};
 \end{tikzpicture}
@@ -123,31 +126,30 @@ S_{\mathbb{C}} = \left\{ 1, -\frac{1}{2} + i\frac{\sqrt{3}}{2}, -\frac{1}{2} - i
 
 \item $f(x) = \sqrt{x}$, appliquons l'IAF
 
-Appliquons l'IAF (Inégalité des Accroissements Finis) sur $[l, l+1]$.
+Appliquons l'IAF (Inégalité des Accroissements Finis) sur $[t, t+1]$.
 
-\textbf{TI-AF 1}
+\boxed{
+\begin{aligned}
+&\textbf{Théorème des Inégalités des Accroissements Finis (TI-AF 1)} \\
+&\text{Soit } f \text{ une fonction définie sur un intervalle } [a, b]. \\
+&\text{Hypothèses :} \\
+&\quad 1) , f \text{ est continue sur } [a, b]. \\
+&\quad 2) , f \text{ est dérivable sur } ]a, b[. \\
+&\quad 3) , \text{Il existe deux réels } m \text{ et } M \text{ tels que, pour tout } x \in ]a, b[, m \leq f'(x) \leq M. \\
+&\text{Conclusion :} \\
+&\quad m(b - a) \leq f(b) - f(a) \leq M(b - a). \\
+&\textbf{Théorème des Inégalités des Accroissements Finis (TI-AF 2)} \\
+&\text{Soit } f \text{ une fonction définie sur un intervalle } [a, b]. \\
+&\text{Hypothèses :} \\
+&\quad 1) , f \text{ est continue sur } [a, b]. \\
+&\quad 2) , f \text{ est dérivable sur } ]a, b[. \\
+&\quad 3) , \text{Il existe un réel } m \geq 0 \text{ tel que, pour tout } x \in ]a, b[, |f'(x)| \leq m. \\
+&\text{Conclusion :} \\
+&\quad |f(b) - f(a)| \leq m|b - a|.
+\end{aligned}
+}
 
-Si $f$ est continue sur $[a, b]$ et dérivable sur $]a, b[$, avec 
-\[
-\exists (m, M) \in \mathbb{R}, \forall x \in [a, b], \quad \text{tel que } m \leq f'(x) \leq M,
-\]
-alors :
-\[
-m(b-a) \leq f(b) - f(a) \leq M(b-a).
-\]
 
-\textbf{TI-AF 2}
-
-Si $f$ est continue sur $[a, b]$ et dérivable sur $]a, b[$, avec 
-\[
-\exists m \in \mathbb{R}_{+}, \forall x \in [a, b], \quad \text{tel que } |f'(x)| \leq m,
-\]
-alors :
-\[
-|f(b) - f(a)| \leq m|b-a|.
-\]
-
-\newpage
 \textbf{Applications} $t > 0$
 
 \begin{itemize}
@@ -491,6 +493,7 @@ DC = |Z_C - Z_D| = |i - i - 1| = 1
 
 $$ \boxed{\mathcal{C}\left( \left( \frac{3-i}{2} \right) , \frac{\sqrt{2}}{2} \right)} $$
 
+$$ \boxed{\mathcal{C} \left( \begin{pmatrix} \frac{3}{2} \\ -\frac{1}{2} \end{pmatrix}, \frac{\sqrt{2}}{2} \right)} $$
 \item Forme exponentielle de $Z$ et Écriture algébrique $Z$
 
 \begin{enumerate}
@@ -615,21 +618,163 @@ MA =2MC &\implies (MA)^{2} =(2MC)^{2}\\
 
 \( M \) décrit donc un cercle de centre $\frac{z_I+z_J}{2}$ et de rayon $\frac{|z_I-z_J|}{2}$
 
-$ \frac{z_I+z_J}{2} = \frac{ -i+\left( \frac{4}{3} - i\right) }{2} $ et $\frac{|z_I-z_J|}{2}=\frac{|-i-\left( \frac{4}{3} - i\right)|}{2} $
+$ \frac{z_I+z_J}{2} = \frac{ -i+\left( \frac{4}{3} - i\right) }{2} $ \text{ et } $\frac{|z_I-z_J|}{2}=\frac{|-i-\left( \frac{4}{3} - i\right)|}{2} $
 
-$ \frac{z_I+z_J}{2} = \frac{ \left( \frac{4}{3} - 2i\right) }{2} $ et $\frac{|z_I-z_J|}{2}=\frac{|-\frac{4}{3}|}{2} $
+$ \frac{z_I+z_J}{2} = \frac{ \left( \frac{4}{3} - 2i\right) }{2} $ \text{ et } $\frac{|z_I-z_J|}{2}=\frac{|-\frac{4}{3}|}{2} $
 
-$ \frac{z_I+z_J}{2} = \frac{ \left( \frac{4 - 6i}{3}\right) }{2} $ et $\frac{|z_I-z_J|}{2}=\frac{4}{6} $
+$ \frac{z_I+z_J}{2} = \frac{ \left( \frac{4 - 6i}{3}\right) }{2} $ \text{ et } $\frac{|z_I-z_J|}{2}=\frac{4}{6} $
 
-$ \frac{z_I+z_J}{2} = \frac{4 - 6i}{6} $ et $\frac{|z_I-z_J|}{2}=\frac{4}{6} $
+$ \frac{z_I+z_J}{2} = \frac{4 - 6i}{6} $ \text{ et } $\frac{|z_I-z_J|}{2}=\frac{4}{6} $
 
-$ \frac{z_I+z_J}{2} = \frac{2 - 3i}{3} $ et $\frac{|z_I-z_J|}{2}=\frac{4}{6} $
+$ \frac{z_I+z_J}{2} = \frac{2 - 3i}{3} $ \text{ et } $\frac{|z_I-z_J|}{2}=\frac{4}{6} $
 
-$ \frac{z_I+z_J}{2} = \frac{2}{3}-i $ et $\frac{|z_I-z_J|}{2}=\frac{4}{6} $
+$ \frac{z_I+z_J}{2} = \frac{2}{3}-i $ \text{ et } $\frac{|z_I-z_J|}{2}=\frac{4}{6} $
 
 $$ \text{Finalement : } \boxed{\mathcal{C}\left( \left( \frac{2}{3}-i \right)  ;\frac{4}{6}\right)} $$
+
+$$ \boxed{\mathcal{C} \left( \begin{pmatrix} \frac{3}{2} \\ -1 \end{pmatrix}, \frac{4}{6} \right)} $$
 \end{enumerate}
+
 \section*{\underline{Problème :} 10 points}
 
-application du théorème des inégalité des accroissement finie
+\subsection*{Partie A}
+
+\begin{enumerate}
+
+\item
+\begin{enumerate}
+    \item Montrons que \( \forall x > -3, \; u(x) = 2 - \frac{2}{x+3} \).
+    
+    \[
+    \text{On a } u(x) = \frac{2x+1}{x+3}
+    \]
+
+    \begin{align*}
+        u(x) &= \frac{2x + 6 - 2}{x+3} \\
+        &= \frac{2(x+3) - 2}{x+3} \\
+        &= 2 - \frac{2}{x+3}
+    \end{align*}
+
+    \item Limites de \( u \) aux bornes de \( ]-3, +\infty[ \) :
+
+    \textbf{En \( -3^+ \)} :
+    
+    \begin{align*}
+    \lim_{x \to -3^+} u(x) &= \lim_{x \to -3^+} \left( 2 - \frac{2}{x+3} \right) \\
+    &= 2 - \lim_{x \to -3^+} \frac{2}{x+3} \\
+    &= 2 - \frac{2}{0^+} \\
+    &= 2 - (+\infty) \\
+    &= +\infty
+    \end{align*}
+
+    \[
+    \text{Donc } \lim_{x \to -3^+} u(x) = +\infty
+    \]
+
+    \textbf{En \( +\infty \)} :
+    
+    \begin{align*}
+    \lim_{x \to +\infty} u(x) &= \lim_{x \to +\infty} \left( 2 - \frac{2}{x+3} \right) \\
+    &= 2 - \lim_{x \to +\infty} \frac{2}{x+3} \\
+    &= 2 - 0 \\
+    &= 2
+    \end{align*}
+
+    \[
+    \text{Donc } \lim_{x \to +\infty} u(x) = 2
+    \]
+
+    \item \textbf{La primitive \( G \) de \( u \) telle que \( G(-2) = 0 \)} :
+    
+    \[
+    u(x) = 2 - \frac{2}{x+3} \quad \text{donc} \quad G(x) = 2x - 2\ln(x+3) + k, \; \text{avec } k \in \mathbb{R}.
+    \]
+
+    \begin{align*}
+    G(-2) &= 2(-2) - 2\ln(-2+3) + k \\
+    &= -4 - 2\ln(1) + k \\
+    &= -4 + k.
+    \end{align*}
+
+       Or \( G(-2) = 0 \) :
+    \[
+    -4 + k = 0 \quad \implies \quad k = 4.
+    \]
+
+    Donc :
+    \[
+    G(x) = 2x - 2\ln(x+3) + 4.
+    \]
+\end{enumerate}
+
+\item
+\begin{enumerate}
+    \item \textbf{Calcul de \( u(-2) \)} :
+
+    \[
+    u(-2) = 2 - \frac{2}{-2+3} \implies u(-2) = 2 - 2 \implies u(-2) = 0.
+    \]
+
+    \[
+    \text{Donc } u(-2) = 0.
+    \]
+    
+    \textbf{Tableau de variation de \( G \)}
+
+\( G \) est la primitive de \( u \) sur \( ]-3, +\infty[ \), donc :$ G'(x) = u(x), \; \forall x \in ]-3, +\infty[. $
+
+Étude du signe de \( u(x) \) sur \( ]-3, +\infty[ \) :
+
+\begin{center}
+
+\begin{tikzpicture}
+   \tkzTabInit[lgt = 2.5, espcl = 3, deltacl = 0.7]{$x$ / 1 , $\frac{2x+1}{x+3}$ / 1 }{$-\infty$, $-3$, $-2$, $+\infty$}
+   \tkzTabLine{,h, d, - ,t, +, }
+\end{tikzpicture}
+
+\end{center}
+
+- \( \forall x \in ]-3, -2[, u(x) < 0 \) donc \( G \) est décroissante.
+
+- \( \forall x \in ]-2, +\infty[, u(x) > 0 \) donc \( G \) est croissante.
+
+\textbf{Limites aux bornes de \( D_G = ]-3, +\infty[ \) :}
+
+\textbf{En \( -3^+ \) :}
+
+\begin{align*}
+\lim_{x \to -3^+} G(x) &= \lim_{x \to -3^+} \left( 2x - 2\ln(x+3) + 4 \right) \\
+&= 2(-3) - 2\ln(0^+) + 4 \\
+&= -6 - 2(-\infty) + 4 \\
+&= +\infty
+\end{align*}
+
+\[
+\text{Donc } \lim_{x \to -3^+} G(x) = +\infty
+\]
+
+\textbf{En \( +\infty \) :}
+
+\begin{align*}
+\lim_{x \to +\infty} G(x) &= \lim_{x \to +\infty} \left( 2x - 2\ln(x+3) + 4 \right) \\
+&= \lim_{x \to +\infty} \frac{2x}{x+3} - \lim_{x \to +\infty} \frac{2\ln(x+3)}{x+3} + \lim_{x \to +\infty} \frac{4}{x+3} \\
+&= 2 - 0 + 0 \\
+&= 2
+\end{align*}
+
+\[
+\text{Donc } \lim_{x \to +\infty} G(x) = 2
+\]
+
+\begin{center}
+    \begin{tikzpicture}[node style/.style={fill opacity=0,text opacity=1}]
+        \tkzTabInit[espcl=1.75]{$x$/.5,$u$/.7,$G$/1.5}{$-3$,$-2$,$+\infty$}
+        \tkzTabLine{,-,z,+,}
+        \tkzTabVar{+/$+\infty$, -/$0$, +/$2$} 
+    \end{tikzpicture}
+\end{center}
+
+\end{enumerate}
+
+\end{enumerate}
 \end{document}
