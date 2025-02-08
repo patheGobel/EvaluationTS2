@@ -61,7 +61,7 @@ middle color = tcbcolback!80!black]
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footruleskip}{10pt}
 \fancyfoot[R]{
-\color{blue}\ding{45}\ \textbf{2024}
+\color{blue}\ding{45}\ \textbf{2025}
 }
 \fancyfoot[L]{
 \color{blue}\ding{45}\ \textbf{Prof:M. BA}
@@ -76,9 +76,9 @@ middle color = tcbcolback!80!black]
 \node[draw=blue,line width=1.2pt,fill=purple,text=blue,inner sep=3mm,rounded corners,pattern=dots]at ([yshift=-2.5cm]current page.north) {\begingroup\setlength{\fboxsep}{0pt}\colorbox{white}{\begin{tabular}{|*1{>{\centering \arraybackslash}p{0.28\textwidth}} |*2{>{\centering \arraybackslash}p{0.2\textwidth}|} *1{>{\centering \arraybackslash}p{0.19\textwidth}|} }
 \hline
 \multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{Lycée de Dindéfélo}\ $\diamond$$\diamond$$\diamond$ }& \textbf{A.S. : 2024/2025} \\ \hline
-\textbf{Matière: Mathématiques}& \textbf{Niveau : T}\textbf{S2} &\textbf{Date: 09/12/2024} & \textbf{Durée : 4 heures} \\ \hline
+\textbf{Matière: Mathématiques}& \textbf{Niveau : T}\textbf{S2} &\textbf{Date: 28/01/2025} & \textbf{Durée : 4 heures} \\ \hline
 \multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
-\textbf{{\Large\sffamily Correction du devoir n$ ^{\circ} $ 1 Du 1$ ^\text{\bf er} $ Semestre}}
+\textbf{{\Large\sffamily Correction de la composition n$ ^{\circ} $ 1 Du 1$ ^\text{\bf er} $ Semestre}}
 \end{center}}} \\ \hline
 \end{tabular}}\endgroup};
 \end{tikzpicture}
@@ -775,6 +775,363 @@ $$ \boxed{\mathcal{C} \left( \begin{pmatrix} \frac{3}{2} \\ -1 \end{pmatrix}, \f
 \end{center}
 
 \end{enumerate}
+\item  Le signe de G.
 
+\(\forall x \in ]-3;+\infty[\)
+\end{enumerate}
+
+\subsection*{Partie B}
+
+\[
+f(x) =
+\begin{cases}
+\sqrt{x^2 + 2x} & \text{si } x \leq -2, \\
+\ln\left(\frac{2x + 1}{x + 3}\right) & \text{si } x > -2.
+\end{cases}
+\]
+
+\begin{enumerate}
+    \item Le domaine \( \mathcal{D}_f \)
+\[ \text{ Posons }
+f(x) =
+\begin{cases}
+f_1(x), & \text{si } x \leq -2, \\
+f_2(x), & \text{si } x > -2.
+\end{cases}
+\]
+
+\begin{itemize}
+    \item \( f_1 \quad  \exists \quad \text{ ssi }  x^2 + 2x \geq 0  \text{ et } x\leq 0 \).
+    
+            \text{Posons } \( x^2 + 2x = 0 \) 
+            
+           \( x^2 + 2x = 0 \implies x(x + 2) = 0 \implies x = 0 \quad \text{ou} \quad x = -2 \) .
+            \begin{center}
+                \begin{tikzpicture}
+                \tkzTabInit[lgt = 2.5, espcl = 3, deltacl = 0.7]{$x$ / 1 , $x^2 + 2x$ / 1 }{$-\infty$, $-2$}
+                \tkzTabLine{,+, z, }
+                \end{tikzpicture}
+            \end{center}
+            \( \underline{\mathcal{D}f_1 = \left]-\infty, -2\right]} \)
+
+    \item  \( f_2  \quad  \exists \quad \text{ ssi } \frac{2x + 1}{x + 3} > 0 \text{ et } x > -2 \)
+
+        \text{D'après la Partie A, } \( u(x)=\frac{2x + 1}{x + 3} \)
+
+        \text{et que } \( \forall x \in \left]-2, +\infty\right[, \, u(x) > 0 \).
+
+        \text{donc } \( \mathcal{D}_{f_2} = \left]-2, +\infty\right[ \cap \left]-\infty, -2\right[ \).
+
+        \( \underline{\mathcal{D}_{f_2} = \left]-2, +\infty\right[} \).
+
+        \text{Finalement, } \( \mathcal{D}_f = \mathcal{D}_{f_1} \cup \mathcal{D}_{f_2} \).
+
+        \text{Ainsi, } \( \underline{\boxed{\mathcal{D}_f = \mathbb{R}}} \).
+
+\end{itemize}
+Les limites aux bornes de \( \mathcal{D}_f \)
+
+\noindent Les bornes sont $-\infty$ et $+\infty$.
+
+\underline{En $-\infty$} : $f(x) = f_1(x)$
+
+\[
+\lim_{x \to -\infty} f(x) = \lim_{x \to -\infty} \sqrt{x^2 + 2x} = +\infty.
+\]
+
+\[
+\text{Donc } \lim_{x \to -\infty} f(x) = +\infty.
+\]
+
+\underline{En $+\infty$} : $f(x) = f_2(x)$
+
+\[
+\lim_{x \to +\infty} f(x) = \lim_{x \to +\infty} \ln\left(\frac{2x + 1}{x + 3}\right).
+\]
+
+\[
+\text{Donc } \lim_{x \to +\infty} f(x) = \ln(2).
+\]
+
+Comme $\lim_{x \to +\infty} f(x) = \ln(2)$ donc $(D): \quad y=\ln(2)$ est une asymptote horizontale
+\item 
+\begin{enumerate}
+    \item La continuité de $f$ en $-2$
+    
+   \underline{ En $-2^{-}$ : $f(x) = f_1(x)$ }
+   
+\begin{align*}
+    \lim_{x \to -2^-} f(x) &= \lim_{x \to 2^-} \sqrt{x^2 + 2x}\\
+                          &= 0
+\end{align*}
+
+\underline{ En $-2^{+}$ : $f(x) = f_2(x)$ }
+
+\begin{align*}
+    \lim_{x \to -2^+} f(x) &= \lim_{x \to -2^+} \ln\left(\frac{2x + 1}{x + 3}\right)\\
+                          &= \ln(0^+)\\
+                          &= -\infty
+\end{align*}
+
+\textbf{Finalement,} $ \lim_{x \to 2^-} f(x) \neq \lim_{x \to -2^+} f(x) $ \textbf{donc $f$ n'est pas continue en $x = -2$.}
+
+    Dérivabilité en \( x = 2 \)
+
+\( f \) n'est pas continue en \( x = -2 \), donc \( f \) n'est pas dérivable en \( x = -2 \).
+
+%    Étude de la dérivabilité en \( x = -2^- \) et \( x = -2^+ \)
+
+%\underline{ En $-2^{-}$ : $f(x) = f_1(x)$ }
+
+%\begin{align*}
+ %   \lim_{x \to -2^-} \frac{f(x) - f(2)}{x - 2} &= \lim_{x \to -2^-} \frac{\sqrt{x^2 + 2x} - 2}{x - 2}\\ 
+  %  &= \lim_{x \to -2^-} \frac{x}{\sqrt{x^2 + 2x}}\\
+   % &= \frac{-2}{0^+}\\ 
+   %&= -\infty                                        
+%\end{align*}
+
+%\( \lim\limits_{x \to -2^-} \frac{f(x) - f(2)}{x - 2} = -\infty \)
+
+
+%Donc, \( f \) n'est pas dérivable en \( x = -2^- \), et elle admet une demi-tangente verticale orientée vers le bas.
+
+%\underline{ En $-2^{+}$ : $f(x) = f_2(x)$ }
+
+%\begin{align*}
+%    \lim_{x \to -2^+} \frac{f(x) - f(2)}{x - 2}& = \lim_{x \to -2^+} \frac{\ln\left(\frac{2x+4}{x+3}\right)}{x+2}\\ 
+%        &=\lim_{x \to -2^+}  \frac{\ln(2x+4)-\ln(x+3)}{x+2}\\ 
+%        &=\lim_{x \to -2^+} \frac{\ln(2x+4)}{x+2}-\frac{\ln(x+3)}{x+2}\\ 
+%        &=-\infty
+%\end{align*}
+\item Montrons que \( ( \Delta ) : y = -x - 1 \) est asymptote à \( ( \mathcal{C} )_{f}\) en \( -\infty \)
+
+Pour ce faire, montrons que \( \lim\limits_{x \to -\infty} \left[ f(x) - y \right] = 0\)
+
+En effet,
+
+\begin{align*}
+    \lim_{x \to -\infty} f(x) - y &= \lim_{x \to -\infty} f(x) - (-x - 1)\\
+                                  &= \lim_{x \to -\infty} \sqrt{x^{2}+2x} - (-x-1)\\
+                                  &= \lim_{x \to -\infty} \frac{x^2 + 2x - x^2 - 2x - 1}{\sqrt{x^2 + 2x} - (x + 1)}\\
+                                  &= \lim_{x \to -\infty} \frac{-1}{\sqrt{x^2 + 2x} - (x + 1)}\\
+                                  &= \lim_{x \to -\infty} \frac{-1}{-x \sqrt{1 + \frac{2}{x}} - (x + 1)}\\
+                                  &= \lim_{x \to -\infty} \frac{-1}{-x \left[\sqrt{1 + \frac{2}{x}} + 1 + \frac{1}{x})\right]}\\
+                                  &= \lim_{x \to -\infty} \frac{1}{x \left[\sqrt{1 + \frac{2}{x}} + 1 + \frac{1}{x})\right]}\\
+                                  &= \lim_{x \to -\infty} \frac{1}{2x}\\
+                                  &=0
+\end{align*}
+
+Donc, \( \lim\limits_{x \to -\infty} \left[ f(x) - y \right] = 0 \)
+
+Finalement, \( (\Delta) \) est asymptote à \( (\varphi) \) en \( -\infty \).
+
+\end{enumerate}
+\item
+\begin{enumerate}
+    \item  Montrons que \( f'(x) = \frac{2}{(x+3)(2x+1)} \) pour \( x > -2 \)
+
+\underline{\textcolor{red}{Pour \( x > -2 \), on a : \( f(x) = \ln \left( \frac{2x+1}{x+3} \right) \)}}
+
+Calculons la dérivée :
+
+\begin{align*}
+    f'(x) &= \frac{(2x+4)'}{(2x+4)} - \frac{(x+3)'}{(x+3)} \\
+          &= \frac{2}{2x+4} - \frac{1}{x+3} \\
+          &= \frac{2(x+3) - (2x+4)}{(2x+4)(x+3)} \\
+          &= \frac{2x+6 - 2x - 4}{(2x+4)(x+3)} \\
+          &= \frac{2}{(2x+4)(x+3)}
+\end{align*}
+Donc, \( f'(x) = \frac{2}{(x+3)(2x+4)} \)
+
+Le signe de \( f' \)
+
+Le signe de \( f' \) dépend du dénominateur :
+
+\[
+\forall x > -2, \quad 2x+1 > 0 \quad \text{ et } \quad x+3 > 0
+\]
+
+Donc, pour que le produit \((x+3)(2x+4) > 0\).
+
+Ainsi, \( \forall x \in ]-2, +\infty[ \), \( f'(x) = \frac{2}{(x+3)(2x+4)} > 0 \)
+
+\underline{\textcolor{red}{Pour \( x \leq -2 \), on a : \( f(x) = \sqrt{x^{2}-2x}\) }}
+
+Si \( x \leq -2, f(x) = \sqrt{ x^{2} + 2x } \)
+
+\(
+\begin{aligned}
+f'(x) &= \frac{2x+2}{2\sqrt{ x^{2} + 2x }}\\
+      &= \frac{x+1}{\sqrt{ x^{2} + 2x }}\\ 
+\end{aligned}
+\)
+
+\( \text{Donc } f(x)=\frac{x+1}{\sqrt{ x^{2} + 2x }}\)
+
+Le signe de \(f'\) dépend du numérateur \( x+1 \)
+
+Donc \( \forall x \in ]-\infty;-2], \) donc \( x+1 < -1 < 0 \)
+
+Donc \( \forall x \in ]-\infty;-2], \) donc \( f'(x)< 0 \)
+
+\begin{center}
+\begin{tikzpicture}
+   \tkzTabInit[lgt=3,espcl=1.5]
+     {$x$ / 1 , $f'(x)$ / 1, $f(x)$ / 2}
+     {$-\infty$, $-2$, $+\infty$}
+   \tkzTabLine
+     { , -, d , + , }  % 'd' pour descendre le trait à x = -2
+   \tkzTabVar
+     {+/$+\infty$, -V-/ $0$ / $-\infty$, +/$\ln(2)$}  % Correction ici
+\end{tikzpicture}
+\end{center}
+
+\end{enumerate}
+\item
+\begin{enumerate}
+    \item Déterminons les intersections de $A$ et $B$ de $\mathcal{C}_{f}$ avec $(Ox)$ et $(Oy)$ respectivement.
+    
+    \underline{ \textbf{ ($\mathcal{C}_{f}$) avec $(Ox)$ } }
+
+    Pour ce faire résolvons de $f(x)=0$
+\[
+\begin{aligned}
+    \begin{cases}
+    \sqrt{x^2 + 2x} = 0 \\
+    \ln\left( \frac{2x+4}{x+3} \right) = 0
+\end{cases} &\implies
+\begin{cases}
+    x^2 + 2x = 0 \\
+    \frac{2x+4}{x+3} = 1
+\end{cases}\\
+ &\implies
+\begin{cases}
+    x= 0 \text{ ou } x = -2 \text{ si } x \leq -2\\
+    x=-1 \text{ si } x > -2
+\end{cases}\\
+\end{aligned}
+\]
+
+\( A_{-1} \begin{pmatrix} -2 \\ 0 \end{pmatrix} \text{ et } A_{-2} \begin{pmatrix} -1 \\ 0 \end{pmatrix} \) 
+
+\underline{ \textbf{ ( \( \mathcal{C}_{f} \) ) avec \( (Oy) \) } }
+
+    Pour ce faire calculons de $f(0)$
+
+    \( f(x) = \ln\left( \frac{2x+4}{x+3} \right) \)
+    
+    \( f(0) = \ln\left( \frac{2 \times 0+4}{0+3} \right) \)
+
+donc \( f(0) = \ln\left( \frac{4}{3} \right) \)
+
+$ B \begin{pmatrix} 0 \\ \ln\left( \frac{4}{3} \right) \end{pmatrix} $
+
+\item Equation de la tangente \( (T) \) à \( (\mathcal{C}_{f}) \) en \( A\begin{pmatrix} -1 \\ 0 \end{pmatrix} \)
+
+\( (T) \): \( y = f'(-1) (x+1)  + f(-1) \)
+
+Or \( f'(-1) = \frac{2}{(-1+3)(-2+4)} \) donc \( f'(-1) = \frac{1}{2} \)
+
+et \( f(-1) = 0 \)
+
+\( (T) \): \( y = \frac{1}{2} \times (x+1) \)
+
+\( (T) \): \( y = \frac{1}{2}x+\frac{1}{2} \)
+\item La courbe 
+\begin{center}
+\begin{figure}[H]% Forcer l'image à cet endroit
+\centering
+\includegraphics[width=0.8\textwidth]{Devoir1Curve.png}
+\caption{Courbe de (Cf)}
+\label{fig:monimage}
+\end{figure}
+\href{https://www.geogebra.org/classic/ud3zvetx}{Clique ici pour voir la courbe sur géogébra}\\
+\end{center}
+\end{enumerate}
+
+\end{enumerate}
+
+\subsection*{Partie C}
+
+Soit \( h \) la restriction de \( f \) à \( I = ]-\infty; -2 [ \)
+
+\begin{enumerate}
+    \item Montrer que \( h \) est une bijection de \( I \) vers un intervalle \( I \) à préciser.
+
+    \( h \) est continue et strictement décroissante sur \( I \) donc réalise une bijection de \( I \) vers \( f(I) = J \)
+
+    avec \( J = [ 0; +\infty [ \)
+    \item 
+    \begin{enumerate}
+        \item \( h^{-1} \) est-elle dérivable sur J ?
+    
+    Comme \( h \) étant dérivable sur \( I \) et que  \( \forall x\in I, h'(x) \neq 0 \) donc \( h^{-1} \) est dérivable sur \( J \).
+
+    Ainsi, \( h^{-1} \) est bien dérivable sur \( J \).
+    \item Dressons le tableau de \( h^{-1} \)
+
+    \begin{center}
+        \begin{tikzpicture}
+        \tkzTabInit[lgt=3,espcl=1.5]
+        {$x$ / 1 , $h'(x)$ / 1, $h$ / 2}
+        {$0$, $+\infty$}
+        \tkzTabLine
+        { , -,d}  % 'd' pour descendre le trait à x = -2
+        \tkzTabVar
+        {+/$-2$, -/$-\infty$}  % Correction ici
+        \end{tikzpicture}
+    \end{center}
+    Calculons \( h(-3) \textbf{ et } (h^{-1})'( \sqrt{3} )  \)
+
+    \( h(x) = \sqrt{x^{2}+2x} \)
+
+    \underline{\textbf{Pour}  \( h(-3)  \) } : 
+
+\(
+    \begin{aligned}
+        h(-3) &= \sqrt{(-3)^{2}+2(-3)}\\
+              &= \sqrt{9 - 6}\\
+              &= \sqrt{3}
+    \end{aligned}
+\)
+
+\( \text{Donc } \boxed{ h(-3)=\sqrt{3} } \)
+
+    \underline{\textbf{Pour} \( (h^{-1})'( \sqrt{3} )  \) }:
+\[\text{On a : }  (h^{-1})'(y) = \frac{1}{h'(h^{-1}(y))} \text{donc } (h^{-1})'(\sqrt{3}) = \frac{1}{h'(h^{-1}(\sqrt{3}))}\]
+
+Calcul de \( h^{-1}(\sqrt{3}) \):
+
+On sait que \( h(-3) = \sqrt{3} \), donc \( h^{-1}(\sqrt{3}) = -3\)
+
+Donc \( (h^{-1})'(\sqrt{3}) = \frac{1}{h'(h^{-1}(\sqrt{3}))}\) devient \( (h^{-1})'(\sqrt{3}) = \frac{1}{h'(-3)}\)
+
+Calcul de \( h'(-3) \):
+
+\(
+\begin{aligned}
+   h'(-3) &= \frac{-3+1}{\sqrt{(-3)^2 + 2(-3)}}\\
+          &= \frac{-2}{\sqrt{9 - 6}}\\
+          &= \frac{-2}{\sqrt{3}}\\
+          &= -\frac{2\sqrt{3}}{3}
+\end{aligned}
+\)
+
+Calcul de \( (h^{-1})'(\sqrt{3}) \)
+
+\(
+\begin{aligned}
+(h^{-1})'(\sqrt{3}) &= \frac{1}{h'(-3)}
+                    &= \frac{1}{-\frac{2\sqrt{3}}{3}}
+                    &= -\frac{3}{2\sqrt{3}}
+                    &= -\frac{\sqrt{3}}{2}
+\end{aligned}
+\)
+
+\[
+\boxed{(h^{-1})'(\sqrt{3}) = -\frac{\sqrt{3}}{2}}
+\]
+\item
+    \end{enumerate}
 \end{enumerate}
 \end{document}
