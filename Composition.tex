@@ -19,6 +19,8 @@ minimum size=1.2em,inner sep=0] (char) {#1};}}
 \usepackage[most]{tcolorbox}
 \usepackage{varwidth}
 \usepackage{float} %pour utiliser l'option [H] qui force l'image à apparaître exactement à l'endroit où elle est placée dans le code.
+\usepackage{graphicx} % Pour inclure des images
+\usepackage{hyperref} % Pour les liens cliquables
 \tcbuselibrary{skins,hooks}
 \usetikzlibrary{patterns}
 %%%::::::by chnini ameur :::::::%%%
@@ -1038,15 +1040,18 @@ et \( f(-1) = 0 \)
 
 \( (T) \): \( y = \frac{1}{2}x+\frac{1}{2} \)
 \item La courbe 
-\begin{center}
-\begin{figure}[H]% Forcer l'image à cet endroit
-\centering
-\includegraphics[width=0.8\textwidth]{Devoir1Curve.png}
-\caption{Courbe de (Cf)}
-\label{fig:monimage}
+
+
+\begin{figure}[H] % Forcer l'image à cet endroit
+    \centering
+    \includegraphics[width=0.8\textwidth]{CourbeCompoIAKedougou.png}
+    \caption{Courbe de (Cf)}
+    \label{fig:monimage}
 \end{figure}
-\href{https://www.geogebra.org/classic/ud3zvetx}{Clique ici pour voir la courbe sur géogébra}\\
-\end{center}
+
+\noindent
+\href{https://www.geogebra.org/classic/ud3zvetx}{Clique ici pour voir la courbe sur Géogébra.}
+
 \end{enumerate}
 
 \end{enumerate}
@@ -2217,15 +2222,17 @@ et \( f(-1) = 0 \)
 
 \( (T) \): \( y = \frac{1}{2}x+\frac{1}{2} \)
 \item La courbe 
+
 \begin{center}
 \begin{figure}[H]% Forcer l'image à cet endroit
 \centering
-\includegraphics[width=0.8\textwidth]{Devoir1Curve.png}
+\includegraphics[width=0.8\textwidth]{CourbeCompoIAKedougou.png}
 \caption{Courbe de (Cf)}
 \label{fig:monimage}
 \end{figure}
 \href{https://www.geogebra.org/classic/ud3zvetx}{Clique ici pour voir la courbe sur géogébra}\\
 \end{center}
+
 \end{enumerate}
 
 \end{enumerate}
@@ -2307,10 +2314,12 @@ Calcul de \( (h^{-1})'(\sqrt{3}) \)
 \end{aligned}
 \)
 
+
 \[
 \boxed{(h^{-1})'(\sqrt{3}) = -\frac{\sqrt{3}}{2}}
 \]
-\item
+
     \end{enumerate}
+
 \end{enumerate}
 \end{document}
