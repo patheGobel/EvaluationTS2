@@ -284,14 +284,195 @@ La fonction $f$ est définie par :
 
           \(
           \begin{aligned}
-              \lim\limits_{x \to 1^-} \frac{f(x) - f(1)}{x - 1} & = \lim\limits_{x \to 1^-} \frac{\frac{2(x^3+1)}{x^2+1} -2}{x-1}\\  
-                                                                & = \lim\limits_{x \to 1^-} \frac{2x^3 +2 - 2x^2 - 2}{(x^2+1)(x-1)}\\
-                                                                & = \lim\limits_{x \to 1^-} \frac{2x^3 - 2x^2}{(x^2+1)(x-1)}\\
-                                                                & = \lim\limits_{x \to 1^-} \frac{2x^2 (x-1)}{(x^2+1)(x-1)}\\
-                                                                & = \lim\limits_{x \to 1^-} \frac{2x^2}{(x^2+1)}\\
+              \lim\limits_{x \to 1^-} \frac{f(x) - f(1)}{x - 1} & = \lim\limits_{x \to 1^-} \frac{\frac{2(x^3+1)}{x^2+1} -2}{x-1}   \\
+                                                                & = \lim\limits_{x \to 1^-} \frac{2x^3 +2 - 2x^2 - 2}{(x^2+1)(x-1)} \\
+                                                                & = \lim\limits_{x \to 1^-} \frac{2x^3 - 2x^2}{(x^2+1)(x-1)}        \\
+                                                                & = \lim\limits_{x \to 1^-} \frac{2x^2 (x-1)}{(x^2+1)(x-1)}         \\
+                                                                & = \lim\limits_{x \to 1^-} \frac{2x^2}{(x^2+1)}                    \\
                                                                 & = 1
           \end{aligned}
           \)
+
+          \[
+              \begin{aligned}
+                  \lim_{x \to 1} \frac{f(x) - f(1)}{x - 1} & = \lim_{x \to 1} \frac{2x^2}{x^2 + 1} \\
+                                                           & = 1
+              \end{aligned}
+          \]
+
+          \( \text{Donc,}
+          \begin{aligned}
+              \lim_{x \to 1} \frac{f(x) - f(1)}{x - 1} & = 1
+          \end{aligned}
+          \)
+
+          \underline{En \( 1^+ \)} :
+
+          \(
+          \begin{aligned}
+              \lim_{x \to 1^+} \frac{f(x) - f(1)}{x - 1} & = \lim_{x \to 1^+} \frac{1 + \sqrt{2x - 1} - 2}{x - 1}           \\
+                                                         & = \lim_{x \to 1^+} \frac{\sqrt{2x - 1} - 1}{x - 1}               \\
+                                                         & = \lim_{x \to 1^+} \frac{2x - 1 - 1}{(x - 1)(\sqrt{2x - 1} + 1)} \\
+                                                         & = \lim_{x \to 1^+} \frac{2(x - 1)}{(x - 1)(\sqrt{2x - 1} + 1)}   \\
+                                                         & = \lim_{x \to 1^+} \frac{2}{\sqrt{2x - 1} + 1}                   \\
+                                                         & = 1
+          \end{aligned}
+          \)
+
+          \( \text{Donc } \lim_{x \to 1^+} \frac{f(x) - f(1)}{x - 1} = 1 \)
+
+          \[
+              \text{Finalement } \lim_{x \to 1^-} \frac{f(x) - f(1)}{x - 1} = \lim_{x \to 1^+} \frac{f(x) - f(1)}{x - 1}
+          \]
+
+          \[
+              \text{Donc } f \text{ est dérivable en } 1.
+          \]
+    \item Équation de la tangente  (T) à \( \mathcal{C}_{f} \) \text{ au point } A(1,2).
+          \[
+              (T) : y = f'(1)(x - 1) + f(1)
+          \]
+
+          \[
+              y = (x - 1) + 2
+          \]
+
+          \[
+              \text{Donc } (T) : y = x + 1
+          \]
+    \item Position de \( (\mathcal{C}_f) \) par rapport à \( (T) \).
+
+          Pour ce faire, étudions le signe de \( f(x) - y \).
+
+          \underline{Pour \( x < 1 \)}
+
+          \(
+          \begin{aligned}
+              f(x) - y & = \frac{2(x^3 + 1)}{x^2 + 1} - (x + 1)           \\
+                       & = \frac{2(x^3 + 1) - (x + 1)(x^2 + 1)}{x^2 + 1}  \\
+                       & = \frac{2x^3 + 2 - (x^3 + x + x^2 + 1)}{x^2 + 1} \\
+                       & = \frac{2x^3 + 2 - x^3 - x^2 - x - 1}{x^2 + 1}   \\
+                       & = \frac{x^3 - x^2 - x + 1}{x^2 + 1}
+          \end{aligned}
+          \)
+
+          \(
+          f(x) - y = \frac{x^3 - x^2 - x + 1}{x^2 + 1}
+          \)
+
+          \text{Le signe dépend du numérateur, que nous étudions avec la méthode de Horner :}
+
+          \[
+              \begin{array}{r|r|r|r|r|}
+                  \hline
+                    & 1 & -1 & -1 & 1 \\
+                  \hline
+                  1 & 1 & 0  & -1 & 0 \\
+                  \hline
+                    & 1 & 0  & -1 & 0 \\
+                  \hline
+              \end{array}
+          \]
+
+          \text{On obtient la factorisation :}
+
+          \(
+          \begin{aligned}
+              x^3 - x^2 - x - 1 & = (x - 1)(x^2 - 1)      \\
+                                & = (x - 1)(x - 1)(x + 1) \\
+                                & = (x + 1)(x - 1)^{2}
+          \end{aligned}
+          \)
+
+          \(
+          \text{Donc } f(x) - y = \frac{(x + 1)(x - 1)^{2}}{x^2 + 1}
+          \)
+
+          \(
+          \text{Si } x < -1, f(x) - y < 0 \text{ donc } (\mathcal{T}) \text{ est au-dessus de } (\mathcal{C}_f)
+          \)
+
+          \(
+          \text{Si } x \in ]-1, 1[, f(x) - y > 0 \text{ donc } (\mathcal{C}_f) \text{ est au-dessus de } (\mathcal{T})
+          \)
+
+          \underline{Pour \( x > 1 \)}
+
+          \(
+          \begin{aligned}
+              f(x) - y & = 1 + \sqrt{2x - 1} - (x + 1) \\
+                       & = \sqrt{2x - 1} - x
+          \end{aligned}
+          \)
+
+          \(
+          \text{Supposons que } \sqrt{2x - 1} - x < 0
+          \)
+
+          \(
+          \begin{aligned}
+              \sqrt{2x - 1} < x
+               & \Leftrightarrow
+              \begin{cases}
+                  x > 0      \\
+                  2x - 1 > 0 \\
+                  2x - 1 < x^2
+              \end{cases}       \\
+               & \Leftrightarrow
+              \begin{cases}
+                  x > 0      \\
+                  2x - 1 > 0 \\
+                  x^2 - 2x + 1>0
+              \end{cases}
+          \end{aligned}
+          \)
+
+          \(
+          \text{Posons}
+          \begin{cases}
+              x > 0      \\
+              2x - 1 > 0 \\
+              x^2 - 2x + 1>0
+          \end{cases}
+          \)
+
+          \(
+          \begin{aligned}
+              \begin{cases}
+                  x = 0      \\
+                  2x - 1 = 0 \\
+                  x^2 - 2x + 1 = 0
+              \end{cases}
+               & \Leftrightarrow
+              \begin{cases}
+                  x = 0         \\
+                  x=\frac{1}{2} \\
+                  x = 1
+              \end{cases}
+          \end{aligned}
+          \)
+
+          \begin{tikzpicture}
+              \tkzTabInit[lgt = 2.5, espcl = 3, deltacl = 0.7]%
+              {$x$ / 1 , $x$ / 1 , $2x - 1$ / 1 , $x^2 - 2x + 1$ / 1}%
+              {$-\infty$, $0$, $\frac{1}{2}$, $1$, $+\infty$}
+              \tkzTabLine{,h,z,h,t,h,t,+,}
+              \tkzTabLine{,h,t,h,z,h,t,+,}
+              \tkzTabLine{,h,t,h,t,h,z,+,}
+          \end{tikzpicture}
+
+          \(
+          \text{Donc pour que } \sqrt{2x - 1} - x < 0, \text{ il faut que } x \geq 1
+          \)
+
+          \(
+          \text{Donc si } x \geq 1 \text{ alors } f(x) - y < 0
+          \)
+
+          \(
+          \text{D'où si } x \geq 1 \text{ alors } (\mathcal{T}) \text{ est au-dessus de } (\mathcal{C}_f)
+          \)
+
 \end{enumerate}
 
 \end{document}
