@@ -14,9 +14,11 @@ minimum size=1.2em,inner sep=0] (char) {#1};}}
 %%%::::::by chnini ameur :::::::%%%
 \everymath{\displaystyle}
 \usepackage[left=1cm,right=1cm,top=1cm,bottom=1.7cm]{geometry}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
 \usepackage{array,multirow}
 \usepackage[most]{tcolorbox}
 \usepackage{varwidth}
+\usepackage{float} %pour utiliser l'option [H] qui force l'image à apparaître exactement à l'endroit où elle est placée dans le code.
 \tcbuselibrary{skins,hooks}
 \usetikzlibrary{patterns}
 %%%::::::by chnini ameur :::::::%%%
@@ -43,19 +45,10 @@ middle color = tcbcolback!80!black]
 },interior style={top color=yellow!5}}
 %%%%%%%%%%%%%%%%%%%%%%%
 
-% Définition de l'encadré adaptatif avec fond jaune
-\newtcolorbox{resultbox}{
-    colback=red!30, % Fond rouge clair
-    colframe=black, % Bordure noire fine
-    sharp corners, % Coins nets
-    boxrule=0.5pt, % Contour léger
-    boxsep=2pt, % Espacement interne
-    left=5pt, right=5pt, top=2pt, bottom=2pt, % Marges internes
-}
-
 \usepackage{fancyhdr}
 \usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
 % Commande pour ajouter du texte en arrière-plan
+\usepackage{tkz-tab}
 \AddToShipoutPicture{
     \AtTextCenter{%
         \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.7}{\fontsize{5cm}{5cm}\selectfont PGB}}}
@@ -68,7 +61,7 @@ middle color = tcbcolback!80!black]
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footruleskip}{10pt}
 \fancyfoot[R]{
-\color{blue}\ding{45}\ \textbf{2025}
+\color{blue}\ding{45}\ \textbf{2024}
 }
 \fancyfoot[L]{
 \color{blue}\ding{45}\ \textbf{Prof:M. BA}
@@ -76,6 +69,17 @@ middle color = tcbcolback!80!black]
 \cfoot{\bf
 \thepage /
 \pageref{LastPage}}
+
+% Définition de l'encadré adaptatif avec fond jaune
+\newtcolorbox{resultbox}{
+    colback=red!30, % Fond rouge clair
+    colframe=black, % Bordure noire fine
+    sharp corners, % Coins nets
+    boxrule=0.5pt, % Contour léger
+    boxsep=2pt, % Espacement interne
+    left=5pt, right=5pt, top=2pt, bottom=2pt, % Marges internes
+}
+
 \begin{document}
 \renewcommand{\arraystretch}{1.5}
 \renewcommand{\arrayrulewidth}{1.2pt}
@@ -83,9 +87,9 @@ middle color = tcbcolback!80!black]
 \node[draw=blue,line width=1.2pt,fill=purple,text=blue,inner sep=3mm,rounded corners,pattern=dots]at ([yshift=-2.5cm]current page.north) {\begingroup\setlength{\fboxsep}{0pt}\colorbox{white}{\begin{tabular}{|*1{>{\centering \arraybackslash}p{0.28\textwidth}} |*2{>{\centering \arraybackslash}p{0.2\textwidth}|} *1{>{\centering \arraybackslash}p{0.19\textwidth}|} }
 \hline
 \multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{Lycée de Dindéfélo}\ $\diamond$$\diamond$$\diamond$ }& \textbf{A.S. : 2024/2025} \\ \hline
-\textbf{Matière: Mathématiques}& \textbf{Niveau : T}\textbf{S2} &\textbf{Date: 19/03/2025} & \textbf{Durée : 4 heures} \\ \hline
+\textbf{Matière: Mathématiques}& \textbf{Niveau : T}\textbf{S2} &\textbf{Date: 09/12/2024} & \textbf{Durée : 4 heures} \\ \hline
 \multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
-\textbf{{\Large\sffamily Correction Devoir n$ ^{\circ} $ 1 Du 2$ ^\text{\bf nd} $ Semestre}}
+\textbf{{\Large\sffamily Correction du devoir n$ ^{\circ} $ 1 Du 1$ ^\text{\bf er} $ Semestre}}
 \end{center}}} \\ \hline
 \end{tabular}}\endgroup};
 \end{tikzpicture}
@@ -98,17 +102,17 @@ Déterminons les limites suivantes :
 
 \(
 \begin{aligned}
-\lim\limits_{x \to +\infty} \ln\left[ \frac{x+1}{x^2 + x + 1}\right]:
-\begin{cases}
-\lim\limits_{x \to +\infty} \frac{x+1}{x^2 + x + 1}=0\\
-\lim\limits_{x \to 0}\ln(x)=-\infty
-\end{cases}\text{Par composition, }\lim\limits_{x \to +\infty} \ln\left[ \frac{x+1}{x^2 + x + 1}\right]=-\infty
+    \lim\limits_{x \to +\infty} \ln\left[ \frac{x+1}{x^2 + x + 1}\right]:
+    \begin{cases}
+        \lim\limits_{x \to +\infty} \frac{x+1}{x^2 + x + 1}=0 \\
+        \lim\limits_{x \to 0}\ln(x)=-\infty
+    \end{cases}\text{Par composition, }\lim\limits_{x \to +\infty} \ln\left[ \frac{x+1}{x^2 + x + 1}\right]=-\infty
 \end{aligned}
 \)
 
 \begin{resultbox}
     \[
-    \mathbf{\ln\left[ \frac{x+1}{x^2 + x + 1}\right]=-\infty}
+        \mathbf{\ln\left[ \frac{x+1}{x^2 + x + 1}\right]=-\infty}
     \]
 \end{resultbox}
 
@@ -116,17 +120,17 @@ Déterminons les limites suivantes :
 
 \(
 \begin{aligned}
-\lim\limits_{x \to +\infty} \frac{\ln(x+2)}{\ln(x+1)}&= \lim\limits_{x \to +\infty} \frac{\ln\left[x\left( 1+ \frac{2}{x}\right) \right]}{\ln\left[x\left( 1+ \frac{1}{x}\right) \right]}\\
-&= \lim\limits_{x \to +\infty} \frac{ \ln(x) + \ln\left( 1+ \frac{2}{x}\right) }{ \ln(x) + \ln\left( 1+ \frac{1}{x}\right)}\\
-&= \lim\limits_{x \to +\infty} \frac{ \ln(x) \left[ 1+ \frac{\ln\left( 1+ \frac{2}{x}\right)}{\ln(x)} \right] }{ \ln(x) \left[ 1+ \frac{\ln\left( 1+ \frac{1}{x}\right)}{\ln(x)} \right]}\\
-&= \lim\limits_{x \to +\infty} \frac{ \left[ 1+ \frac{\ln\left( 1+ \frac{2}{x}\right)}{\ln(x)} \right] }{ \left[1+ \frac{\ln\left( 1+ \frac{1}{x}\right)}{\ln(x)} \right]}\\
-&= 1\\
+    \lim\limits_{x \to +\infty} \frac{\ln(x+2)}{\ln(x+1)} & = \lim\limits_{x \to +\infty} \frac{\ln\left[x\left( 1+ \frac{2}{x}\right) \right]}{\ln\left[x\left( 1+ \frac{1}{x}\right) \right]}                                                      \\
+                                                          & = \lim\limits_{x \to +\infty} \frac{ \ln(x) + \ln\left( 1+ \frac{2}{x}\right) }{ \ln(x) + \ln\left( 1+ \frac{1}{x}\right)}                                                               \\
+                                                          & = \lim\limits_{x \to +\infty} \frac{ \ln(x) \left[ 1+ \frac{\ln\left( 1+ \frac{2}{x}\right)}{\ln(x)} \right] }{ \ln(x) \left[ 1+ \frac{\ln\left( 1+ \frac{1}{x}\right)}{\ln(x)} \right]} \\
+                                                          & = \lim\limits_{x \to +\infty} \frac{ \left[ 1+ \frac{\ln\left( 1+ \frac{2}{x}\right)}{\ln(x)} \right] }{ \left[1+ \frac{\ln\left( 1+ \frac{1}{x}\right)}{\ln(x)} \right]}                \\
+                                                          & = 1                                                                                                                                                                                      \\
 \end{aligned}\\
 \)
 
 \begin{resultbox}
     \[
-    \mathbf{\lim\limits_{x \to +\infty} \frac{\ln(x+2)}{\ln(x+1)}=1}
+        \mathbf{\lim\limits_{x \to +\infty} \frac{\ln(x+2)}{\ln(x+1)}=1}
     \]
 \end{resultbox}
 
@@ -134,15 +138,15 @@ Déterminons les limites suivantes :
 
 \(
 \begin{aligned}
-\lim\limits_{x \to 0^+} \frac{\ln x+2}{\ln x+1} &=\lim\limits_{x \to 0^+} \frac{\ln x\left(1+\frac{2}{\ln x}\right)}{\ln x\left(1+\frac{1}{\ln x}\right)}\\
-=&\lim\limits_{x \to 0^+} \frac{\left(1+\frac{2}{\ln x}\right)}{\left(1+\frac{1}{\ln x}\right)}\\
-=&1
+    \lim\limits_{x \to 0^+} \frac{\ln x+2}{\ln x+1} & =\lim\limits_{x \to 0^+} \frac{\ln x\left(1+\frac{2}{\ln x}\right)}{\ln x\left(1+\frac{1}{\ln x}\right)} \\
+    =                                               & \lim\limits_{x \to 0^+} \frac{\left(1+\frac{2}{\ln x}\right)}{\left(1+\frac{1}{\ln x}\right)}            \\
+    =                                               & 1
 \end{aligned}
 \)
 
 \begin{resultbox}
     \[
-    \mathbf{\lim\limits_{x \to +\infty} \lim\limits_{x \to 0^+} \frac{\ln x+2}{\ln x+1}=1}
+        \mathbf{\lim\limits_{x \to +\infty} \lim\limits_{x \to 0^+} \frac{\ln x+2}{\ln x+1}=1}
     \]
 \end{resultbox}
 
@@ -152,17 +156,169 @@ Déterminons les limites suivantes :
 
 \(
 \begin{aligned}
-\lim\limits_{x \to +\infty} \frac{\ln x}{\sqrt{x}}&=\lim\limits_{x \to +\infty} \frac{\ln\left[(\sqrt{x})^{2}\right] }{\sqrt{x}}\\
-&=\lim\limits_{x \to +\infty} \frac{2\ln\left[\sqrt{x}\right] }{\sqrt{x}}\\
-&=0\\
+    \lim\limits_{x \to +\infty} \frac{\ln x}{\sqrt{x}} & =\lim\limits_{x \to +\infty} \frac{\ln\left[(\sqrt{x})^{2}\right] }{\sqrt{x}} \\
+                                                       & =\lim\limits_{x \to +\infty} \frac{2\ln\left[\sqrt{x}\right] }{\sqrt{x}}      \\
+                                                       & =0                                                                            \\
 \end{aligned}
 \)
 
 \begin{resultbox}
     \[
-    \mathbf{\lim\limits_{x \to +\infty} \frac{\ln x}{\sqrt{x}}=0}
+        \mathbf{\lim\limits_{x \to +\infty} \frac{\ln x}{\sqrt{x}}=0}
     \]
 \end{resultbox}
 
+\section*{\underline{Problème :} 11,75 points }
+\subsection*{\underline{\textbf{Partie A}}:\textbf{ 2,75 pts}}
+
+Soit \( g(x) = 2x \ln(-x) + x + 1 \).
+
+\begin{enumerate}
+    \item Déterminons l’ensemble de définition \( D_g \) de \( g \).\hfill \textbf{(0,5 pt)}
+
+          \(g\) existe ssi \(-x>0\)
+
+          \(\begin{aligned}
+              -x>0 & \implies x<0              \\
+                   & \implies x\in ]-\infty;0[
+          \end{aligned}\)
+
+          Donc \(Dg=]-\infty;0[\)
+
+          \begin{resultbox}
+              \[
+                  \mathbf{Dg=]-\infty;0[}
+              \]
+          \end{resultbox}
+
+    \item Calculons les limites aux bornes de \( D_g \).\hfill \textbf{(0,5 pt)}
+
+          \underline{En $-\infty$}
+
+          \( \begin{aligned}
+              \lim\limits_{x\to -\infty}g(x) & =\lim\limits_{x\to -\infty} 2x \ln(-x) + x + 1 \\
+                                             & =-\infty
+          \end{aligned} \)
+
+          \( \lim\limits_{x\to -\infty}g(x) = -\infty \)
+
+          \begin{resultbox}
+              \[
+                  \mathbf{\lim\limits_{x\to -\infty}g(x) = -\infty}
+              \]
+          \end{resultbox}
+
+          \underline{En $0^{-}$}
+
+          \( \begin{aligned}
+              \lim\limits_{x\to 0^{-}}g(x) & =\lim\limits_{x\to 0^{-}} 2x \ln(-x) + x + 1     \\
+                                           & =\lim\limits_{x\to 0^{-}} -2(-x \ln(-x)) + x + 1 \\
+                                           & =1
+          \end{aligned} \)
+
+          \( \lim\limits_{x\to 0^{-}}g(x) = 1 \)
+
+          \begin{resultbox}
+              \[
+                  \mathbf{\lim\limits_{x\to 0^{-}}g(x) = 1}
+              \]
+          \end{resultbox}
+    \item Étudions les variations de \( g \).\hfill \textbf{(1 pt)}
+
+          \(
+          \begin{aligned}
+              g(x) & = 2x \ln(-x) + x + 1                                  \\
+                   & = 2(x \ln(-x))' + (x + 1)'                            \\
+                   & = 2\left[(x)'\ln(-x)+x(\ln(-x))'\right] + 1           \\
+                   & = 2\left[\ln(-x)+x\left(\frac{1}{x}\right)\right] + 1 \\
+                   & = 2\left[\ln(-x)+1\right] + 1                         \\
+                   & = 2\ln(-x)+ 3
+          \end{aligned}
+          \)
+          
+          \begin{resultbox}
+              \[
+                  \mathbf{g'(x)=2\ln(-x)+ 3}
+              \]
+          \end{resultbox}
+
+          Etudions le signe de \(g\)
+
+          Supposons que \( 2\ln(-x)+ 3 > 0 \)
+
+          \(
+          \begin{aligned}
+              2\ln(-x)+ 3 > 0 & \implies \ln(-x)> \frac{-3}{2}                       \\
+                              & \implies \ln(-x)> \ln\left(e^{\frac{-3}{2}}\right)   \\
+                              & \implies -x> e^{\frac{-3}{2}}                        \\
+                              & \implies x< -e^{\frac{-3}{2}}                        \\
+                              & \implies x\in \left]-\infty;-e^{\frac{-3}{2}}\right[ \\
+          \end{aligned}
+          \)
+
+          \(
+            \begin{cases}
+              \forall x \in \left]-\infty;-e^{\frac{-3}{2}}\right[, g'(x)>0  \text{ donc $g$ y est croissant}\\
+              \forall x \in \left]-e^{\frac{-3}{2}};0\right[, g'(x)<0 \text{ donc $g$ y est décroissant}      
+          \end{cases} 
+          \)
+
+                    \begin{center}
+                        \begin{tikzpicture}
+                            \tkzTabInit[espcl=6]
+                            {$x$ / 1 , $f'(x)$ / 1, $f(x)$ / 2 }
+                            {$-\infty$, $-e^{\frac{-3}{2}}$, $0$}
+                            \tkzTabLine
+                            {, +, z , -,}
+                            \tkzTabVar
+                            { -/$-\infty$ , +/$2e^{\frac{-3}{2}} + 1$, -/$1$}
+                            \tkzTabVal[draw]{1}{2}{0.3}{$-1$}{$0$}
+                        \end{tikzpicture}
+                    \end{center}
+
+\(
+\begin{aligned}
+g(-e^{\frac{-3}{2}}) &= 2(-e^{\frac{-3}{2}}) \ln(-(-e^{\frac{-3}{2}})) + (-e^{\frac{-3}{2}}) + 1 \\
+&= -2e^{\frac{-3}{2}} \ln e^{\frac{-3}{2}} - e^{\frac{-3}{2}} + 1\\
+&= -2e^{\frac{-3}{2}} \times \frac{-3}{2} - e^{\frac{-3}{2}} + 1 \\
+&= 3e^{\frac{-3}{2}} - e^{\frac{-3}{2}} + 1 \\
+&= 2e^{\frac{-3}{2}} + 1.
+\end{aligned}
+\)
+
+          \begin{resultbox}
+              \[
+                  \mathbf{g(-e^{\frac{-3}{2}})=2e^{\frac{-3}{2}} + 1}
+              \]
+          \end{resultbox}        
+        
+          \item Calculons \( g(-1) \).\hfill \textbf{(0,75 pt)}
+          
+\(
+\begin{aligned}
+g(-1) &= 2(-1) \ln(-(-1)) + (-1) + 1 \\
+&= -2 \ln(1) - 1 + 1\\
+g(-1) &= -2 \times 0 - 1 + 1 \\
+&= 0.
+\end{aligned}
+\)
+
+          \begin{resultbox}
+              \[
+                  \mathbf{g(-1)=0}
+              \]
+          \end{resultbox} 
+
+Le signe de \( g(x) \)
+
+D'après le tableau de variation:
+
+          \(
+            \begin{cases}
+              \forall x \in \left]-\infty;-1\right[, g(x)<0  \\
+              \forall x \in \left]-1;0\right[, g(x)>0       
+          \end{cases} 
+          \)
+\end{enumerate}
 
 \end{document}
