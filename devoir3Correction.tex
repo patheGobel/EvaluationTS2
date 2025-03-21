@@ -554,9 +554,43 @@ ainsi
     \begin{cases}
         g(x) & \text{si } x < 0 \\
         (\ln(x)+1)^{2}  & \text{si } x > 0 \\
-    \end{cases}\\
+    \end{cases}\textbf{ cqfd}
 \end{aligned}
 \)
+
+\item Calculons les limites de \( f \) aux bornes de son domaine de définition.\hfill \textbf{(0,5 pt)}
+
+\underline{En \( -\infty \), on a :} \( f(x) = x^2 \ln(-x) + x + 1 \)
+
+\(
+\begin{aligned}
+    \lim\limits_{x\to -\infty} f(x) &= \lim\limits_{x\to -\infty} x^2 \ln(-x) + x + 1\\
+    &= \lim\limits_{x\to -\infty} x \left[-\frac{\ln(-x)}{-x} + \frac{x + 1}{x}\right]\\
+    &= -\infty \left[0+1 \right]\\
+    &=-\infty
+\end{aligned}
+\)
+
+\begin{resultbox}
+    \[
+        \mathbf{\lim\limits_{x\to -\infty} f(x) = -\infty }
+    \]
+\end{resultbox} 
+
+\underline{En \( +\infty \), on a :} \( f(x) = x \ln(x)^2 + x + 1. \)
+
+\(
+\begin{aligned}
+    \lim\limits_{x\to +\infty} f(x) &= \lim\limits_{x\to +\infty}  x \ln(x)^2 + x + 1\\
+    &=+\infty
+\end{aligned}
+\)
+
+\begin{resultbox}
+    \[
+        \mathbf{\lim\limits_{x\to +\infty} f(x) = +\infty }
+    \]
+\end{resultbox} 
 \end{enumerate}
 
 \end{document}
