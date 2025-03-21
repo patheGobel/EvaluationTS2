@@ -591,6 +591,42 @@ ainsi
         \mathbf{\lim\limits_{x\to +\infty} f(x) = +\infty }
     \]
 \end{resultbox} 
+
+\item Étudions les branches infinies de \( (C_f) \).\hfill \textbf{(0,5 pt)}
+
+Comme \( \lim\limits_{x\to -\infty} f(x) = -\infty  \) calculons \( \lim\limits_{x\to -\infty} \frac{f(x)}{x}   \)
+
+En effet 
+
+\( 
+\begin{aligned}
+    \lim\limits_{x\to -\infty} \frac{f(x)}{x} &= \lim\limits_{x\to -\infty} \frac{x^2 \ln(-x) + x + 1}{x}\\
+    &=\lim\limits_{x\to -\infty} x\ln(-x) + \frac{x + 1}{x}\\
+    &=-\infty+1\\
+    &=-\infty
+\end{aligned} 
+\)
+
+Donc \( \lim\limits_{x\to -\infty} \frac{f(x)}{x} =+\infty   \)
+
+\textcolor{red}{Donc \(Cf\) admet une branche parabolique de direction \((Oy)\) au voisinage de \(-\infty\)}
+
+Comme \( \lim\limits_{x\to +\infty} f(x) = +\infty  \) calculons \( \lim\limits_{x\to +\infty} \frac{f(x)}{x}   \)
+
+En effet 
+
+\( 
+\begin{aligned}
+    \lim\limits_{x\to +\infty} \frac{f(x)}{x} &= \lim\limits_{x\to +\infty} \frac{x \ln(x)^2 + x + 1}{x}\\
+    &=\lim\limits_{x\to +\infty} \ln(x)^2 + \frac{x + 1}{x}\\
+    &=+\infty+1\\
+    &=+\infty
+\end{aligned} 
+\)
+
+Donc \( \lim\limits_{x\to +\infty} \frac{f(x)}{x} =-\infty   \)
+
+\textcolor{red}{Donc \((Cf)\) admet une branche parabolique de direction \((Oy)\) au voisinage de \(+\infty\)}
 \end{enumerate}
 
 \end{document}
