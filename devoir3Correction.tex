@@ -565,15 +565,15 @@ ainsi
 \(
 \begin{aligned}
     \lim\limits_{x\to -\infty} f(x) &= \lim\limits_{x\to -\infty} x^2 \ln(-x) + x + 1\\
-    &= \lim\limits_{x\to -\infty} x \left[-\frac{\ln(-x)}{-x} + \frac{x + 1}{x}\right]\\
-    &= -\infty \left[0+1 \right]\\
-    &=-\infty
+    &= \lim\limits_{x\to -\infty} x^{2} \left[\ln(-x) + \frac{x + 1}{x}\right]\\
+    &= +\infty \left[+\infty+1 \right]\\
+    &=+\infty
 \end{aligned}
 \)
 
 \begin{resultbox}
     \[
-        \mathbf{\lim\limits_{x\to -\infty} f(x) = -\infty }
+        \mathbf{\lim\limits_{x\to -\infty} f(x) = +\infty }
     \]
 \end{resultbox} 
 
@@ -594,7 +594,7 @@ ainsi
 
 \item Étudions les branches infinies de \( (C_f) \).\hfill \textbf{(0,5 pt)}
 
-Comme \( \lim\limits_{x\to -\infty} f(x) = -\infty  \) calculons \( \lim\limits_{x\to -\infty} \frac{f(x)}{x}   \)
+Comme \( \lim\limits_{x\to -\infty} f(x) = +\infty  \) calculons \( \lim\limits_{x\to -\infty} \frac{f(x)}{x}   \)
 
 En effet 
 
@@ -627,6 +627,35 @@ En effet
 Donc \( \lim\limits_{x\to +\infty} \frac{f(x)}{x} =-\infty   \)
 
 \textcolor{red}{Donc \((Cf)\) admet une branche parabolique de direction \((Oy)\) au voisinage de \(+\infty\)}
+    \item Dressons le tableau de variations de \( f \).\hfill \textbf{(1 pt)}
+
+Le signe de \( f \).  on a : \(
+              f'(x) =
+              \begin{cases}
+                  g(x)          & \text{si } x < 0 \\
+                  (1 + \ln x)^2 & \text{si } x > 0
+              \end{cases}
+          \)\hfill \textbf{(0,5$\times$3 pts)}
+
+          \(
+            \begin{cases}
+              \forall x \in \left]-\infty;-1\right[, g(x)<0 \text{ donc \(f\) est y décroissante}\\
+              \forall x \in \left]-1;0\right[, g(x)>0 \text{ donc \(f\) y est croissante}\\
+              \forall x \in \left]0;-\infty\right[, f(x)>0
+          \end{cases} 
+          \)
+    
+        \begin{tikzpicture}[node style/.style={fill opacity=0,text opacity=1}]
+        \tkzTabInit[espcl=1.75]{$x$/.5,$f'$/.7,$f$/1.5}{$-\infty$,$-1$,$0$,$+\infty$}
+        \tkzTabLine{,-,z,+,t,+,}
+        \tkzTabVar{+/$-\infty$,+/$-3$,+/$+\infty$}
+    		\end{tikzpicture}
+    		
+
+    %\item Montrer que dans \( ]-\infty; -1[ \), l’équation \( f(x) = 1 \)
+
+         % admet une unique solution \( \alpha \) puis vérifier que \(-1,8 < \alpha < -1,7\).\hfill \textbf{(0,75 pt)}
+    %\item Construire \( (C_f) \) (unité 2 cm) (on précisera la tangente au point d’abscisse \( e^{-1} \) et on placera le point d’abscisse 1).\hfill \textbf{(0,75 pt)}
 \end{enumerate}
 
 \end{document}
