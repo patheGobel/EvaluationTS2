@@ -321,4 +321,242 @@ D'après le tableau de variation:
           \)
 \end{enumerate}
 
+\subsection*{\underline{\textbf{Partie B}}:\textbf{ 7 pts}}
+
+On considère la fonction \( f \) définie par :
+
+\[
+    f(x) =
+    \begin{cases}
+        x^2 \ln(-x) + x + 1 & \text{si } x < 0 \\
+        x \ln(x)^2 + x + 1  & \text{si } x > 0 \\
+        1                   & \text{si } x = 0
+    \end{cases}
+\]
+
+On note \( (C_f) \) sa courbe représentative dans un repère orthonormé.
+
+\begin{enumerate}
+    \item Justifions que \( f \) est définie sur \( \mathbb{R} \).\hfill \textbf{(0,5 pt)}
+
+		\[ \text{Posons }
+    f(x) =
+    \begin{cases}
+        f_{1}(x)=x^2 \ln(-x) + x + 1 & \text{si } x < 0 \\
+        f_{2}(x)=x \ln(x)^2 + x + 1  & \text{si } x > 0 \\
+        f_{3}(x)=1                   & \text{si } x = 0
+    \end{cases}
+\]    
+    
+*\(f_{1}\) existe ssi \(-x > 0\)
+    
+    \(
+    \begin{aligned}
+    -x > 0 &\implies x < 0\\
+    			 &\implies x \in]-\infty;0[
+    \end{aligned}
+    \)
+    
+    \underline{\(Df_{1} = ]-\infty;0[ \)}
+    
+*\(f_{2}\) existe ssi \(x > 0\)
+    
+    \(
+    \begin{aligned}
+    x > 0 &\implies x \in]-\infty;0[
+    \end{aligned}
+    \)
+    
+    \underline{\(Df_{2} = \in]-\infty;0[ \)}
+    
+    \underline{\(Df_{3} = \{0\} \)}
+    
+Donc 
+
+\(
+\begin{aligned}
+Df&=Df_{1} \cup Df_{2} \cup Df_{3}\\
+&=]-\infty;0[ \cup ]-\infty;0[\cup\{0\}\\
+&=\mathbb{R}
+\end{aligned}
+\)
+
+\begin{resultbox}
+    \[
+        \mathbf{Df=\mathbb{R}}
+    \]
+\end{resultbox} 
+
+\item Étudions la continuité et la dérivabilité de \( f \) en 0. \hfill \textbf{(1,5 pt)}
+
+\underline{\textbf{Continuité}}
+
+\underline{En \( 0^- \), on a :} \( f(x) = x^2 \ln(-x) + x + 1. \)
+
+\(
+\begin{aligned}
+     \lim\limits_{x \to 0^-}x^2 \ln(-x) + x + 1:
+    \begin{cases}
+        \lim\limits_{x \to 0^-}x^2 \ln(-x)=0 \\
+       \lim\limits_{x \to 0^-} x + 1 =1
+    \end{cases}\text{ Par somme}: \lim\limits_{x \to 0^-}x^2 \ln(-x) + x + 1 = 1
+\end{aligned}
+\)
+
+Ainsi,
+\begin{resultbox}
+    \[
+        \mathbf{\lim\limits_{x \to 0^-} f(x) = 1}
+    \]
+\end{resultbox} 
+
+\underline{En \( 0^+ \), on a :} \( f(x) = x \ln(x)^2 + x + 1. \)
+
+\(
+\begin{aligned}
+    \lim\limits_{x \to 0^+} x \ln(x)^2 + x + 1:
+    \begin{cases}
+        \lim\limits_{x \to 0^+} (x^{\frac{1}{2}} \ln(x))^2 = 0, \\
+        \lim\limits_{x \to 0^+} x + 1 = 1.
+    \end{cases}
+    \text{ Par somme : } \lim\limits_{x \to 0^+} f(x) = 1.
+\end{aligned}
+\)
+
+Ainsi,
+
+\begin{resultbox}
+    \[
+        \mathbf{\lim\limits_{x \to 0^+} f(x) = 1}
+    \]
+\end{resultbox} 
+
+\textbf{  Conclusion }
+
+On sait que \( f(0) = 1 \). De plus :
+
+\begin{resultbox}
+    \[
+        \mathbf{\lim\limits_{x \to 0^-} f(x) = \lim\limits_{x \to 0^+} f(x) = f(0) = 1.
+        }
+    \]
+\end{resultbox} 
+
+Par conséquent, la fonction \( f \) est \textbf{continue en \( x = 0 \)}.
+
+\underline{\textbf{Dérivabilité}}
+
+\underline{En \( 0^- \), on a :} \( f(x) = x^2 \ln(-x) + x + 1. \)
+
+\( 
+\begin{aligned}
+    \lim\limits_{x \to 0^-}\frac{f(x)-f(0)}{x-0} &=\lim\limits_{x \to 0^-} \frac{x^2 \ln(-x) + x + 1-1}{x}\\
+    &=\lim\limits_{x \to 0^-} \frac{x^2 \ln(-x) + x }{x}\\
+    &=\lim\limits_{x \to 0^-} x \ln(-x) + 1\\
+    &=1
+\end{aligned} 
+\)
+
+\begin{resultbox}
+    \[
+        \mathbf{\lim\limits_{x \to 0^-}\frac{f(x)-f(0)}{x-0}=1
+        }
+    \]
+\end{resultbox} 
+
+\underline{En \( 0^+ \), on a :} \( f(x) = x \ln(x)^2 + x + 1. \)
+
+\( 
+\begin{aligned}
+    \lim\limits_{x \to 0^+}\frac{f(x)-f(0)}{x-0} &=\lim\limits_{x \to 0^+} \frac{x \ln(x)^2 + x + 1-1}{x}\\
+    &=\lim\limits_{x \to 0^+} \frac{x \ln(x)^2 + x }{x}\\
+    &=\lim\limits_{x \to 0^+} \ln(x)^2+1\\
+    &=1
+\end{aligned} 
+\)
+
+\begin{resultbox}
+    \[
+        \mathbf{\lim\limits_{x \to 0^+}\frac{f(x)-f(0)}{x-0}=1
+        }
+    \]
+\end{resultbox} 
+
+\begin{resultbox}
+    \[
+        \mathbf{\lim\limits_{x \to 0^-}\frac{f(x)-f(0)}{x-0}=\lim\limits_{x \to 0^+}\frac{f(x)-f(0)}{x-0}=1
+        }
+    \]
+\end{resultbox} 
+
+Par conséquent, la fonction \( f \) est \textbf{dérivable en \( x = 0 \)}.
+
+Interprétons graphiquement les résultats:
+
+\( f \) est dérivable en 0 et admet une tangeant d'équation \( y=x \)
+
+    \item Donnons le domaine de dérivabilité de \( f \) puis montrons que
+          \(
+              f'(x) =
+              \begin{cases}
+                  g(x)          & \text{si } x < 0 \\
+                  (1 + \ln x)^2 & \text{si } x > 0
+              \end{cases}
+          \)\hfill \textbf{(0,5$\times$3 pts)}
+
+\textbf{\underline{Domaine de dérivabilité}}
+
+\( f_{1}(x)=x^2 \ln(-x) + x + 1 \) est dérivable si \( x < 0 \) ainsi \( Df_{1}' = ]-\infty;0[\) 
+
+\( f_{2}(x)=x \ln(x)^2 + x + 1  \) est dérivable si \(  x > 0 \) ainsi \( Df_{2}' = ]0;+\infty[\) 
+
+D'après ce qui précède, \(f\) est dérivable en 0 donc f est bien dérivable sur \(\mathbb{R}\).
+
+ainsi 
+
+\( 
+\begin{aligned}
+    Df'&=Df_{1}' \cup Df_{2}' \cup Df_{3}\\
+        &=]-\infty;0[ \cup ]0;+\infty[ \cup  \{0\}\\
+        &=\mathbb{R}
+\end{aligned} 
+\)
+
+\begin{resultbox}
+    \[
+        \mathbf{Df'=\mathbb{R} }
+    \]
+\end{resultbox} 
+
+\(
+\begin{aligned}
+        f'(x) &=
+    \begin{cases}
+        [x^2 \ln(-x) + x + 1]' & \text{si } x < 0 \\
+        [x \ln(x)^2 + x + 1]'  & \text{si } x > 0 \\
+    \end{cases}\\
+    &=
+    \begin{cases}
+        (x^2 \ln(-x))' + (x + 1)' & \text{si } x < 0 \\
+        (x \ln(x)^2)' + (x + 1)'  & \text{si } x > 0 \\
+    \end{cases}\\
+    &=
+    \begin{cases}
+        2x \ln(-x) + x^2\times\frac{1}{x} + 1 & \text{si } x < 0 \\
+        \ln(x)^2+2x\times\frac{1}{x}\times\ln(x) + 1  & \text{si } x > 0 \\
+    \end{cases}\\
+    &=
+    \begin{cases}
+        2x \ln(-x) + x + 1 & \text{si } x < 0 \\
+        \ln(x)^2+2\ln(x) + 1  & \text{si } x > 0 \\
+    \end{cases}\\
+    &=
+    \begin{cases}
+        g(x) & \text{si } x < 0 \\
+        (\ln(x)+1)^{2}  & \text{si } x > 0 \\
+    \end{cases}\\
+\end{aligned}
+\)
+\end{enumerate}
+
 \end{document}
