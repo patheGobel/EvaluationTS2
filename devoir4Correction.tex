@@ -273,19 +273,14 @@ $\begin{aligned}
 \lim\limits_{x \to +\infty} g(x) &= \lim\limits_{x \to +\infty} (1 + x + \ln x) \\
 &= +\infty
 \end{aligned}$
+
 D'où, le tableau de variations de $g$ suivant :
 
-\[
-\begin{array}{|c|c|c|c|}
-\hline
-x & 0 & +\infty \\
-\hline
-g'(x) & + & + \\
-\hline
-g(x) & -\infty & +\infty \\
-\hline
-\end{array}
-\]
+    \begin{tikzpicture}[node style/.style={fill opacity=0,text opacity=1}]
+        \tkzTabInit[espcl=1.75]{$x$/.5,$g'(x)$/.7,$g$/1.5}{$0$,$+\infty$}
+        \tkzTabLine{d,+,}
+        \tkzTabVar{D-/$-\infty$,+/$+\infty$/}
+    \end{tikzpicture}
 
 \item  Montrons qu'il existe un unique réel $\alpha$ solution de l'équation $g(x) = 0$.\\
 
@@ -473,6 +468,7 @@ Ainsi,
         \tkzTabLine{,-,z,+}
         \tkzTabVar{+/$0$,-/$-\alpha$,+/$+\infty$/}
     \end{tikzpicture}
+    
 \item Représentons la courbe de $f$ dans le plan muni du repère orthonormal $(O ; \vec{i}, \vec{j})$. Unité graphique : 5 cm. Prendre $\alpha \approx 0.3$.
 
 % Insérer l'image
